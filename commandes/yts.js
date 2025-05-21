@@ -46,8 +46,8 @@ fana({
     }, { quoted: ms });
 
   } catch (error) {
-    console.error(`Alec-Jb😰😊\nError during the search\n  ${nomAuteurMessage}, 🤤🤤process: ${error},`);
-    repondre(`Alec-Jb😭 \nError during the search😡😡\n ${nomAuteurMessage}, process: ${error},`);
+    console.error("Alec-Jb😰😊\nError during the search\n 🤤🤤process: " + error.message);
+    repondre("Alec-Jb😭 \nError during the search😡😡\n process: " + error.message);
   }
 });
       
