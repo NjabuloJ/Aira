@@ -39,7 +39,9 @@ fana(
          forwardedNewsletterMessageInfo: {
          serverMessageId: 143,
         id: msg.key.id, remoteJid: dest
-      }});
+         }
+        }
+      });
     await zk.sendMessage(dest, {
       react: {
         text: "🏓", key: ms.key
