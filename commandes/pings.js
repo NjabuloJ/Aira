@@ -34,14 +34,8 @@ fana(
     const ping = end - start;
     await zk.sendMessage(dest, {
       text: `Pong▰▰▰▱▱▱ ${ping} ms`, edit: {
-        contextInfo: {
-         isForwarded: true,
-         forwardedNewsletterMessageInfo: {
-         serverMessageId: 143,
         id: msg.key.id, remoteJid: dest
-         }
-        }
-      });
+      }});
     await zk.sendMessage(dest, {
       react: {
         text: "🏓", key: ms.key
