@@ -16,7 +16,7 @@ fana(
   {
     nomCom: 'ping',
     categorie: 'General',
-    reaction: '🚀',
+    reaction: '📟',
     alias: ['p']
   },
 
@@ -33,7 +33,7 @@ fana(
     const end = new Date().getTime();
     const ping = end - start;
     await zk.sendMessage(dest, {
-      text: `Pong ${ping} ms*`, edit: {
+      text: `Pong▰▰▰▱▱▱ ${ping} ms`, edit: {
         id: msg.key.id, remoteJid: dest
       }});
     await zk.sendMessage(dest, {
