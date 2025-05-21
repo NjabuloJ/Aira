@@ -42,6 +42,8 @@ fana({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions)
     let infoMsg = `
 - mode: ${mode}
 - prefix: *[ ${prefixe} ]*
+- daye: *${date}*
+- time: *${temps}*
 - plugins: ${cm.length}
 - ram: ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())
   
