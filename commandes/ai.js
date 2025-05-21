@@ -74,7 +74,7 @@ fana({
   reaction: '🤷',
   categorie: "AI"
 }, async (dest, zk, params) => {
-  handleAiCommand(dest, zk, params, "https://bk9.fun/ai/llama?q=", "Example usage: gpt Hi, how are you?");
+  handleAiCommand(dest, zk, params, "https://bk9.fun/ai/llama?q=", "Alec-Jb\n🧏Example usage: gpt Hi, how are you?");
 });
 
 fana({
@@ -83,7 +83,7 @@ fana({
   reaction: '🤷',
   categorie: "AI"
 }, async (dest, zk, params) => {
-  handleAiCommand(dest, zk, params, "https://bk9.fun/ai/gemini?q=", "Example usage: gemini Hi, how are you?");
+  handleAiCommand(dest, zk, params, "https://bk9.fun/ai/gemini?q=", "Alec-Jb\n😔My friend can you Example usage: gemini Hi, how are you?🤬😅");
 });
 
 fana({
@@ -119,8 +119,8 @@ fana({
       },
     });
   } catch (error) {
-    console.error("Error generating AI response:", error);
-    await repondre("Sorry, I couldn't process your request.");
+    console.error("Alec-Jb\n😡😡am sorry about it 😭\n🤦or try again later 🥵🥵Error generating AI response:", error);
+    await repondre("Alec-Jb\n🤣🤣am not good about gpt\n😬🤬😡 Sorry, I couldn't process your request.");
   }
 });
 
