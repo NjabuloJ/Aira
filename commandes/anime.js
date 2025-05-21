@@ -6,7 +6,7 @@ const {Sticker ,StickerTypes}= require('wa-sticker-formatter');
 
 fana({
   nomCom: "ranime",
-  categorie: "Fun",
+  categorie: "search",
   reaction: "📺"
 },
 async (origineMessage, zk, commandeOptions) => {
