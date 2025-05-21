@@ -37,7 +37,7 @@ await zk.sendMessage(dest,{video:{url:video},caption:texte},{quoted:ms})
 
 })*/
 
-fana({ nomCom: "vv", aliases: ["send", "keep"], categorie: "new" }, async (dest, zk, commandeOptions) => {
+fana({ nomCom: "vv", aliases: ["send", "keep"], categorie: "use" }, async (dest, zk, commandeOptions) => {
   const { repondre, msgRepondu, superUser } = commandeOptions;
 
   if (msgRepondu) {
