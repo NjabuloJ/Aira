@@ -52,15 +52,15 @@ ram: ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
    
     // Two sets of images to display randomly
     const extraImages1 = [
-        "https://i.ibb.co/n6rw805/694affc7ca5a5fb0cb58c2b4533f962d.jpg",
-        "https://i.ibb.co/n6rw805/694affc7ca5a5fb0cb58c2b4533f962d.jpg",
-        "https://i.ibb.co/n6rw805/694affc7ca5a5fb0cb58c2b4533f962d.jpg"
+        "https://files.catbox.moe/sbe1io.jpg",
+        "https://files.catbox.moe/8te9a3.jpg",
+        "https://files.catbox.moe/2d2gvj.jpg"
     ];
 
     const extraImages2 = [
-        "https://i.ibb.co/n6rw805/694affc7ca5a5fb0cb58c2b4533f962d.jpg",
-        "https://i.ibb.co/n6rw805/694affc7ca5a5fb0cb58c2b4533f962d.jpg",
-        "https://i.ibb.co/n6rw805/694affc7ca5a5fb0cb58c2b4533f962d.jpg"
+        "https://files.catbox.moe/sbe1io.jpg",
+        "https://files.catbox.moe/8te9a3.jpg",
+        "https://files.catbox.moe/2d2gvj.jpg"
     ];
 
     // Randomly select which menu to show
