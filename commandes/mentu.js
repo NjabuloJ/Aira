@@ -35,24 +35,21 @@ fana({ nomCom: "men", categorie: "General" }, async (dest, zk, commandeOptions) 
     // Generate commands list
     let commandList = "\n\nAvailable Commands";
     for (let category in coms) {
-        commandList += `\n\n*${category}*\n`;
-        commandList += coms[category].map((cmd) => `- ${prefixe}${cmd}`).join("\n");
+        commandList += `\n\n【${category}】\n`;
+        commandList += coms[category].map((cmd) => `- ${cmd}`).join("\n");
     }
 
     let infoMsg = `
-ʙᴏᴛ ᴜsᴇʀ: *${nomAuteurMessage}*
-ᴍᴏᴅᴇ: *${mode}*
-ᴘʀᴇғɪx: *[ ${prefixe} ]*
-ᴅᴀᴛᴇ: *${date}*
-ᴛɪᴍᴇ: *${temps}*
-ᴄᴏᴍᴍᴀɴᴅs: *${cm.length}*
-ᴄᴀᴘᴀᴄɪᴛʏ: ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-
-🌟 *${greeting}* 🌟
+bot use: *${nomAuteurMessage}*
+mode: *${mode}*
+prefix: *[ ${prefixe} ]*
+date: *${date}*
+time: *${temps}*
+plugins: *${cm.length}*
+ram: ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
   
   ${commandList}`;
-  
-    
+   
     // Two sets of images to display randomly
     const extraImages1 = [
         "https://i.ibb.co/n6rw805/694affc7ca5a5fb0cb58c2b4533f962d.jpg",
