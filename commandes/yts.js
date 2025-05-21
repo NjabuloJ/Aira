@@ -13,8 +13,8 @@ fana({
   const { ms, repondre, arg } = commandeOptions;
   const query = arg.join(" ");
 
-  if (!query) {
-    return repondre("Please provide a search query.");
+  if (!verifAdmin && !superUser) {
+    return repondre(`Alec-Jb🤦\nPlease provide a search query😡🤥.\ndont tage me again\ just approve name like alone walker 🙋🤷${nomAuteurMessage},`);
   }
 
   try {
@@ -27,10 +27,10 @@ fana({
 
     let captions = `*${conf.BOT} YOUTUBE SEARCH*\n`;
     results.slice(0, 10).forEach((video, index) => {
-      captions += `*────────────────────*\n${index + 1}.*Title:* ${video.title}\n*Time:* ${video.timestamp}\n*Url:* ${video.url}\n`;
+      captions += `\n${index + 1}. Title: ${video.title}\n Time: ${video.timestamp}\n Url: ${video.url}\n`;
     });
 
-    captions += "\n─────────────────────\n*";
+    captions += "\n_";
 
     const thumb = results[0].thumbnail; // Using the first video's thumbnail
 
@@ -46,8 +46,8 @@ fana({
     }, { quoted: ms });
 
   } catch (error) {
-    console.error("Error during the search process:", error);
-    repondre("Error during the search process: " + error.message);
+    console.error(`Alec-Jb😰😊\nError during the search\n  ${nomAuteurMessage}, 🤤🤤process: ${error},`);
+    repondre(`Alec-Jb😭 \nError during the search😡😡\n ${nomAuteurMessage}, process: ${error},`);
   }
 });
       
