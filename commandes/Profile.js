@@ -5,7 +5,7 @@ fana({
   nomCom: "profile",
   aliases: ["pp", "whois"],
   desc: "to generate profile picture",
-  categorie: "Fun"
+  categorie: "use"
 }, async (dest, zk, commandeOptions) => {
   const { ms, arg, repondre, auteurMessage, nomAuteurMessage, msgRepondu, auteurMsgRepondu } = commandeOptions;
 
@@ -56,7 +56,7 @@ fana({
   nomCom: "profile2",
   aliases: ["pp2", "whois2"],
   desc: "to generate business profile picture",
-  categorie: "Fun"
+  categorie: "use"
 }, async (dest, zk, commandeOptions) => {
   const { ms, arg, repondre, auteurMessage, nomAuteurMessage, msgRepondu, auteurMsgRepondu } = commandeOptions;
 
