@@ -4,7 +4,7 @@ const axios = require("axios");
 const config = {
   nomCom: "book",
   reaction: '💗',
-  categorie: 'IA'
+  categorie: 'AI'
 };
 
 fana(config, async (responseHandler, args, context) => {
