@@ -39,7 +39,8 @@ fana({ nomCom: "men", categorie: "General" }, async (dest, zk, commandeOptions) 
         commandList += coms[category].map((cmd) => `- ${cmd}`).join("\n");
     }
 
-    let infoMsg = `mode: ${mode}
+    let infoMsg = `
+- mode: ${mode}
 - prefix: *[ ${prefixe} ]*
 - total use: ${formattedTotalUsers}
 - plugins: ${cm.length}
