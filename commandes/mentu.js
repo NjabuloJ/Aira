@@ -6,7 +6,7 @@ const os = require("os");
 const moment = require("moment-timezone");
 const s = require(__dirname + "/../set");
 
-fana({ nomCom: "men", categorie: "General" }, async (dest, zk, commandeOptions) => {
+fana({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions) => {
     let { ms, repondre, prefixe, nomAuteurMessage, mybotpic } = commandeOptions;
     let { cm } = require(__dirname + "/../njabulo//fana");
     var coms = {};
@@ -42,10 +42,10 @@ fana({ nomCom: "men", categorie: "General" }, async (dest, zk, commandeOptions) 
     let infoMsg = `
 - mode: ${mode}
 - prefix: *[ ${prefixe} ]*
-- total use: ${formattedTotalUsers}
 - plugins: ${cm.length}
 - ram: ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())
-  ${commandList}`;
+  
+    ${commandList}`;
    
     // Two sets of images to display randomly
     const extraImages1 = [
