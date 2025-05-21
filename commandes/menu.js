@@ -98,7 +98,6 @@ ${commandList}`;
                     },
                 },
             }, { quoted: ms });
-        }
     } catch (e) {
         console.log("🥵🥵 Error sending menu: " + e);
         repondre("🥵🥵 Error sending menu: " + e);
