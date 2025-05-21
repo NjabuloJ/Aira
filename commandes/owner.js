@@ -31,11 +31,7 @@ fana({ nomCom: "owner", categorie: "General", reaction: "❣️" }, async (dest,
         {
           image : { url : mybotpic() },
           caption : msg,
-          mentions` ${mentionedJid},
-         contextInfo: {
-         isForwarded: true,
-         forwardedNewsletterMessageInfo: {
-         serverMessageId: 143,
+          mentions : mentionedJid
         }
       )
   } else {
@@ -48,8 +44,12 @@ fana({ nomCom: "owner", categorie: "General", reaction: "❣️" }, async (dest,
         'END:VCARD';
     zk.sendMessage(dest, {
         contacts: {
-            displayName: conf.OWNER_NAME,
-            contacts: [{ vcard }],
+         displayName: conf.OWNER_NAME,
+         contacts: [{ vcard }],
+          contextInfo: {
+          isForwarded: true,
+          forwardedNewsletterMessageInfo: {
+          serverMessageId: 143,
         },
     },{quoted:ms});
   }
