@@ -34,7 +34,7 @@ fana({
     for (let i = 0; i < Math.min(results.length, 5); i++) {
       zk.sendMessage(dest, {
         image: { url: results[i].url },
-        caption: `pinex🧏💫`,
+        caption: "pinex🧏💫",
         contextInfo: {
          isForwarded: true,
          forwardedNewsletterMessageInfo: {
