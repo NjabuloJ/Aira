@@ -12,11 +12,11 @@ const fetchGptResponse = async (url, query) => {
     if (data && data.status) {
       return data.BK9;
     } else {
-      throw new Error('Failed to retrieve GPT response.');
+      throw new Error('Alec-Jb\n 😡😡Failed to retrieve GPT response\n you can try again 🧏🤷.');
     }
   } catch (error) {
-    console.error('Error fetching GPT response:', error);
-    return 'Something went wrong. Unable to fetch GPT response.';
+    console.error('Alec-Jb\n 😡😡 am broke 🥺 Error fetching GPT response:', error);
+    return 'Alec-Jb\n😅😅 no just take ar minutes and try again later🤬🥵\nSomething went wrong. Unable to fetch GPT response.';
   }
 };
 
@@ -56,7 +56,7 @@ fana({
   reaction: '🙂',
   categorie: "AI"
 }, async (dest, zk, params) => {
-  handleAiCommand(dest, zk, params, "https://bk9.fun/ai/chataibot?q=", "Example usage: gpt How's the weather today?");
+  handleAiCommand(dest, zk, params, "https://bk9.fun/ai/chataibot?q=", "Alec-Jb\n🤤🤗Example usage: gpt How's the weather today?");
 });
 
 fana({
@@ -65,7 +65,7 @@ fana({
   reaction: '🤖',
   categorie: "AI"
 }, async (dest, zk, params) => {
-  handleAiCommand(dest, zk, params, "https://bk9.fun/ai/BK93?BK9=you%20are%20zoro%20from%20one%20piece&q=", "Hello there, This is vw golf, How may I help you with?");
+  handleAiCommand(dest, zk, params, "https://bk9.fun/ai/BK93?BK9=you%20are%20zoro%20from%20one%20piece&q=", "Hello there, This is Alec-Jb, How may I help you with?");
 });
 
 fana({
@@ -87,7 +87,7 @@ fana({
 });
 
 fana({
-  nomCom: "ask",
+  nomCom: "asksong",
   aliases: ["gpt4", "ai"],
   reaction: '🤦',
   categorie: "AI"
@@ -96,7 +96,7 @@ fana({
   const alpha = arg.join(" ").trim();
 
   if (!alpha) {
-    return repondre("Please provide a song name.");
+    return repondre("Alec-Jb\n what going on😡😡\nPlease provide a song name🤗🤥\n or .asksong alone walker lost control.");
   }
 
   const text = alpha;
