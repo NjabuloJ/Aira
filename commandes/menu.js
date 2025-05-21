@@ -82,7 +82,7 @@ ${commandList}`;
     try {
       if (mediaUrl.match(/\.(mp4|gif)$/i)) {
             await zk.sendMessage(dest, {
-                video: { url: mediaUrl },
+                image: { url: mediaUrl },
                 caption: infoMsg,
                 footer: "*CASEYRHODES-XMD*, developed by CASEYRHODES",
                 gifPlayback: true,
@@ -98,6 +98,7 @@ ${commandList}`;
                     },
                 },
             }, { quoted: ms });
+         }
     } catch (e) {
         console.log("🥵🥵 Error sending menu: " + e);
         repondre("🥵🥵 Error sending menu: " + e);
