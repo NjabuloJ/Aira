@@ -50,6 +50,8 @@ fana({ nomCom: "owner", categorie: "General", reaction: "❣️" }, async (dest,
           isForwarded: true,
           forwardedNewsletterMessageInfo: {
           serverMessageId: 143,
+           },
+          },
         },
     },{quoted:ms});
   }
