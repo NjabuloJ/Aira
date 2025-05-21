@@ -3,7 +3,7 @@ const { fana } = require('../njabulo/fana');
 
 fana({
   nomCom: "happi",
-  categorie: "funs",
+  categorie: "fun",
   reaction: "😂"
 }, async (dest, zk, commandeOptions) => {
   const { repondre, ms } = commandeOptions;
