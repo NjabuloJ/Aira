@@ -7,7 +7,7 @@
     "baileys",
     "whatsapp"
   ],
-  "logo": "https://telegra.ph/file/b148f6ed21fa02ac5325b.jpg",
+  "logo": "https://files.catbox.moe/2d2gvj.jpg",
   "repository": "https://github.com/NjabuloJ/Alec-Jb",
   "success_url": "/",
   "stack": "container",
@@ -80,7 +80,7 @@
     },
     "BOT_NAME": {
       "description": "You must give a name for your bot",
-      "value": "",
+      "value": "Alec-Jb",
       "required": false
     },
     "TIMEZONE": {
@@ -105,7 +105,7 @@
     },
     "URL": {
       "description": "You must add your bot image URL",
-      "value": "",
+      "value": "https://files.catbox.moe/2d2gvj.jpg",
       "required": true
     },
     "NUMERO_OWNER": {
