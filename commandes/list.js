@@ -28,11 +28,10 @@ fana({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions)
     const date = moment().format('DD/MM/YYYY');
 
     let infoMsg = `
-┊✺┌────••••────⊷
-┃✇│◎ 𝙾𝚠𝚗𝚎𝚛 : ${s.OWNER_NAME}
-┃✇│◎ 𝙿𝚛𝚎𝚏𝚒𝚡 : [ ${s.PREFIXE} ]
-┃✇│◎ 𝙼𝚘𝚍𝚎 : ${mode}
-┃✇│◎ 𝙳𝚊𝚝𝚎  : ${date}
+- . Owner : ${s.OWNER_NAME}
+- . prefix : *[ ${s.PREFIXE} ]*
+- . mode : ${mode}
+- . date : ${date}
 \n`;
 
     let menuMsg = ``;
@@ -42,7 +41,7 @@ fana({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions)
 - . ${category} `;
         for (const cmd of commandsList[category]) {
             menuMsg += `          
-- . ${s.PREFIXE}  *${cmd}*`;
+- . ${cmd}`;
         }
         menuMsg += `
 - .`;
