@@ -40,14 +40,20 @@ fana({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions)
     }
 
     let infoMsg = `
-- mode: ${mode}
-- prefix: *[ ${prefixe} ]*
-- daye: *${date}*
-- time: *${temps}*
-- plugins: ${cm.length}
-- ram: ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())
-  
-    ${commandList}`;
+╭══════════════⊷❍
+┇❍▸ ʙᴏᴛ ɴᴀᴍᴇ: *ᴄᴀsᴇʏʀʜᴏᴅᴇs ᴛᴇᴄʜ*
+┇❍▸ ʙᴏᴛ ᴜsᴇʀ: *${nomAuteurMessage}*
+┇❍▸ ᴍᴏᴅᴇ: *${mode}*
+┇❍▸ ᴘʀᴇғɪx: *[ ${prefixe} ]*
+┇❍▸ ᴘʟᴀᴛғᴏʀᴍ: *${os.platform()}*
+┇❍▸ ᴅᴀᴛᴇ: *${date}*
+┇❍▸ ᴛɪᴍᴇ: *${temps}*
+┇❍▸ ᴄᴏᴍᴍᴀɴᴅs: *${cm.length}*
+┇❍▸ ᴄᴀᴘᴀᴄɪᴛʏ: ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
+╰══════════════⊷❍
+
+${commandList}`;
+            
    
     // Two sets of images to display randomly
     const extraImages1 = [
