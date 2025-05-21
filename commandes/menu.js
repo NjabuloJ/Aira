@@ -80,11 +80,12 @@ ${commandList}`;
     }
 
     try {
-        if (mediaUrl.match(/\.(mp4|gif)$/i)) {
+      if (mediaUrl.match(/\.(mp4|gif)$/i)) {
             await zk.sendMessage(dest, {
-                image: { url: mediaUrl },
+                video: { url: mediaUrl },
                 caption: infoMsg,
                 footer: "*CASEYRHODES-XMD*, developed by CASEYRHODES",
+                gifPlayback: true,
                 contextInfo: {
                     externalAdReply: {
                         title: "ᴄᴀsᴇʏʀʜᴏᴅᴇs ᴛᴇᴄʜ",
