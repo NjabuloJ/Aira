@@ -39,15 +39,11 @@ fana({ nomCom: "men", categorie: "General" }, async (dest, zk, commandeOptions) 
         commandList += coms[category].map((cmd) => `- ${cmd}`).join("\n");
     }
 
-    let infoMsg = `
-bot use: *${nomAuteurMessage}*
-mode: *${mode}*
-prefix: *[ ${prefixe} ]*
-date: *${date}*
-time: *${temps}*
-plugins: *${cm.length}*
-ram: ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-  
+    let infoMsg = `mode: ${mode}
+- prefix: *[ ${prefixe} ]*
+- total use: ${formattedTotalUsers}
+- plugins: ${cm.length}
+- ram: ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())
   ${commandList}`;
    
     // Two sets of images to display randomly
