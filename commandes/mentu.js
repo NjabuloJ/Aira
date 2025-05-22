@@ -85,7 +85,6 @@ ${commandList}`;
     try {
         if (mediaUrl.match(/\.(mp4|gif)$/i)) {
             await zk.sendMessage(dest, {
-                video: { url: mediaUrl },
                 caption: infoMsg,
                 footer: "njabulo, developed by njabulo",
                 gifPlayback: true,
@@ -94,6 +93,7 @@ ${commandList}`;
                         title: "Alec-Jb",
                         body: "Tap here to Join our official channel!",
                         mediaType: 1,
+                        thumbnailUrl: thumbnail,
                         sourceUrl: "https://whatsapp.com/channel/0029VakUEfb4o7qVdkwPk83E",
                         showAdAttribution: true,
                         [renderType]: true, // Apply correct thumbnail size
@@ -102,7 +102,6 @@ ${commandList}`;
             }, { quoted: ms });
         } else {
             await zk.sendMessage(dest, {
-                image: { url: mediaUrl },
                 caption: infoMsg,
                 footer: "njabulo*, developed by njabulo",
                 contextInfo: {
@@ -110,6 +109,7 @@ ${commandList}`;
                         title: "Alec-Jb",
                         body: "Tap here to Join our official channel!",
                         mediaType: 1,
+                        thumbnailUrl: thumbnail,
                         sourceUrl: "https://whatsapp.com/channel/0029VakUEfb4o7qVdkwPk83E",
                         showAdAttribution: true,
                         [renderType]: true, // Apply correct thumbnail size
