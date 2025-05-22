@@ -53,7 +53,7 @@ const date = moment().format('DD/MM/YYYY');
 *┋📅 ᴅᴀᴛᴇ: ${date}*
 *┋⏰ ᴛɪᴍᴇ: ${temps}*
 *┋🫂hallo: ${greeting}
-*┋📟ʀᴀᴍ* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())} 
+*┋📟ᴘʟᴜɢɪɴs ᴄᴍᴅ : ${cm.length}*
 *╰─❖*
 
 > 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐓𝐄𝐂𝐇\n${readmore}`;
