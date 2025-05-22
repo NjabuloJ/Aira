@@ -4,7 +4,7 @@ const axios = require('axios');
 const conf = require(__dirname + '/../set');
 
 fana({
-  nomCom: "imgs",
+  nomCom: "img",
   aliases: ["image", "images"],
   categorie: "Images",
   reaction: "🖼️"
@@ -12,7 +12,7 @@ fana({
   const { repondre, ms, arg } = commandeOptions;
 
   if (!arg[0]) {
-    repondre('Which image?');
+    repondre('*Alec-Jb*\n😡😡DON’T WASTE MY VIBES! Give me a img title, like .img Faded! 😡\n');
     return;
   }
 
@@ -21,25 +21,23 @@ fana({
 
   function sendImage(error, results) {
     if (error) {
-      repondre("Oops, an error occurred.");
+      repondre("*Alec-Jb*\nNO IMAGES ! Your query is TRASH! Try again! 😣\nOops, an error occurred.");
       return;
     }
 
     if (!results || results.length === 0) {
-      repondre("No images found.");
+      repondre("*Alec-Jb*\n😂NO IMAGES ! Your query is TRASH! Try again! 😣\n");
       return;
     }
 
     for (let i = 0; i < Math.min(results.length, 5); i++) {
       zk.sendMessage(dest, {
         image: { url: results[i].url },
-        caption: `•`,
+        caption: `*Alec-Jb*\nHold up, Grabbing your  image like a pro! 🔍\n`,
         contextInfo: {
          isForwarded: true,
          forwardedNewsletterMessageInfo: {
-         newsletterJid: '120363345407274799@newsletter',
-         newsletterName: "_many_",
-         serverMessageId: 143,
+          serverMessageId: 143,
          }
         }
       }, { quoted: ms });
@@ -58,7 +56,7 @@ fana({
     const images = response.data;
 
     if (!Array.isArray(images) || images.length === 0) {
-      throw new Error("No images found in the response.");
+      throw new Error("*Alec-Jb*\n😏DON’T WASTE MY VIBES! Give me a mess title, like .mess Faded! 😡\n.");
     }
 
     for (let i = 0; i < 5; i++) {
@@ -66,20 +64,18 @@ fana({
       const image = images[randomImage];
       await zk.sendMessage(dest, {
         image: { url: image },
-        caption: `•`,
+        caption: `*Alec-Jb*\nHold up, Grabbing your  image like a pro! 🔍\n`,
         contextInfo: {
          isForwarded: true,
          forwardedNewsletterMessageInfo: {
-         newsletterJid: '120363345407274799@newsletter',
-         newsletterName: "_many_",
          serverMessageId: 143,
          }
         }
       }, { quoted: ms });
     }
   } catch (error) {
-    console.error("Error occurred while retrieving data:", error);
-    sendMessage("Error occurred while retrieving data: " + error.message);
+    console.error("*Alec-Jb*\n🤣Error occurred while retrieving data:", error);
+    sendMessage("*Alec-Jb*\n🥵Error occurred while retrieving data: " + error.message);
   }
 });
 fana({
@@ -97,19 +93,17 @@ fana({
 
       await zk.sendMessage(origineMessage, {
         image: { url: imageUrl },
-        caption: `•`,
+        caption: `*Alec-Jb*\nHold up, Grabbing your  image like a pro! 🔍\n`,
         contextInfo: {
          isForwarded: true,
          forwardedNewsletterMessageInfo: {
-         newsletterJid: '120363345407274799@newsletter',
-         newsletterName: "_many_",
          serverMessageId: 143,
          }
         }
       }, { quoted: ms });
     }
   } catch (error) {
-    repondre('Error retrieving data: ' + error.message);
+    repondre('*Alec-Jb*\n🥺Error retrieving data: ' + error.message);
   }
 });
 fana({
@@ -127,19 +121,17 @@ fana({
 
       await zk.sendMessage(origineMessage, {
         image: { url: imageUrl },
-        caption: `•`,
+        caption: `*Alec-Jb*\nHold up, Grabbing your  image like a pro! 🔍\n`,
         contextInfo: {
          isForwarded: true,
          forwardedNewsletterMessageInfo: {
-         newsletterJid: '120363345407274799@newsletter',
-         newsletterName: "_many_",
          serverMessageId: 143,
          }
         }
       }, { quoted: ms });
     }
   } catch (error) {
-    repondre('Error retrieving data: ' + error.message);
+    repondre('*Alec-Jb*\n🥵🥵Error retrieving data: ' + error.message);
   }
 });
 fana({
@@ -157,19 +149,17 @@ fana({
 
       await zk.sendMessage(origineMessage, {
         image: { url: imageUrl },
-        caption: `•`,
+        caption: `*Alec-Jb*\nNO IMAGES ! Your query is TRASH! Try again! 😣\n`,
         contextInfo: {
          isForwarded: true,
          forwardedNewsletterMessageInfo: {
-         newsletterJid: '120363345407274799@newsletter',
-         newsletterName: "_many_",
          serverMessageId: 143,
          }
         }
       }, { quoted: ms });
     }
   } catch (error) {
-    repondre('Error retrieving data: ' + error.message);
+    repondre('*Alec-Jb*\n😂Error retrieving data: ' + error.message);
   }
 });
 fana({
@@ -190,15 +180,13 @@ fana({
         contextInfo: {
          isForwarded: true,
          forwardedNewsletterMessageInfo: {
-         newsletterJid: '120363345407274799@newsletter',
-         newsletterName: "_many_",
          serverMessageId: 143,
           }
         }
       }, { quoted: ms });
     }
   } catch (error) {
-    repondre('Error retrieving data: ' + error.message);
+    repondre('*Alec-Jb*\n😡😡Error retrieving data: ' + error.message);
   }
 });
 
