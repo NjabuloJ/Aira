@@ -28,15 +28,15 @@ fana({ nomCom: "ma", categorie: "General" }, async (dest, zk, commandeOptions) =
         coms[com.categorie].push(com.nomCom);
     });
 
-    moment.tz.setDefault ("Africa/nairobi");
+    moment.tz.setDefault ("Africa/Botswana");
         const hour = moment().hour();
-    let greeting = "🌅ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ!";
+    let greeting = "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ!";
     if (hour >= 12 && hour < 18) {
-        greeting = "🌄ɢᴏᴏᴅ ᴀғᴛᴇʀɴɴᴏɴ!;
+        greeting = "ɢᴏᴏᴅ ᴀғᴛᴇʀɴɴᴏɴ!;
     } else if (hour >= 18) {
-        greeting = "🌇ɢᴏᴏᴅ ᴇᴠᴇʀɴɪɴɢ!";
+        greeting = "ɢᴏᴏᴅ ᴇᴠᴇʀɴɪɴɢ!";
     } else if (hour >= 22 || hour < 5) {
-        greeting = "🌌ɢᴏᴏᴅ ɴɪɢʜᴛ";
+        greeting = "ɢᴏᴏᴅ ɴɪɢʜᴛ";
     };
     
 
@@ -52,7 +52,7 @@ const date = moment().format('DD/MM/YYYY');
 *┋🕵️ ʙᴏᴛ ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ*
 *┋📅 ᴅᴀᴛᴇ: ${date}*
 *┋⏰ ᴛɪᴍᴇ: ${temps}*
-*┋🫂hallo: ${greeting}
+*┋🫂hallo: ${greeting}*
 *┋📟ᴘʟᴜɢɪɴs ᴄᴍᴅ : ${cm.length}*
 *╰─❖*
 
