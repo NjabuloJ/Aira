@@ -1,98 +1,100 @@
-
-const { fana } = require('../njabulo/fana');
-const axios = require('axios');
-const conf = require(__dirname + "/../set");
-
-fana({
-  nomCom: "new",
-  reaction: '📰',
-  categorie: 'use'
-}, async (dest, zk, context) => {
-  const { repondre, ms } = context;
-
-  try {
-    // Fetching tech news from the API
-    const response = await axios.get("https://fantox001-scrappy-api.vercel.app/technews/random");
-    const data = response.data;
-    const { thumbnail, news } = data;
-
-    await zk.sendMessage(dest, {
-      text: news,
-      contextInfo: {
-         isForwarded: true,
-         forwardedNewsletterMessageInfo: {
-        },
-      },
-    }, { quoted: ms });
-
-  } catch (error) {
-    console.error("*Alec-Jb*\n☹️☹️Error fetching tech news:", error);
-    await repondre("*Alec-Jb*\n🤦🥵Sorry, there was an error retrieving the news. Please try again later.\n" + error);
-  }
-});
+// NJABULO JB OBT
+//GOOD BYE 👋👋
 
 
-fana({
-  nomCom: "biblie",
-  reaction: '📖',
-  categorie: "use"
-}, async (dest, zk, commandeOptions) => {
-  const { repondre, arg, ms } = commandeOptions;
-  const reference = arg.join(" ");
-  
-  if (!reference) {
-    return repondre("*Alec-Jb*\nHEY,  😤 What’s this nonsense? No message about bible?\n😬😬🤤 Stop wasting my time and give me message specify the book, chapter, and verse you want to read. Example: bible Mathew 3:16", {
-      contextInfo: {
-         isForwarded: true,
-         forwardedNewsletterMessageInfo: {
-        },
-      },
-    });
-  }
-  
-  try {
-    const response = await axios.get(`https://bible-api.com/${reference}`);
-    
-    if (!response.data) {
-      return repondre("*Alec-Jb*\n😅😰Invalid reference. Example: bible john 3:16", {
-        contextInfo: {
-         isForwarded: true,
-         forwardedNewsletterMessageInfo: {
-          },
-        },
-      });
-    }
-    
-    const data = response.data;
-    const messageText = `
-HOLY BIBLE 
 
-WE'RE READING: ${data.reference}
 
-NUMBER OF VERSES: ${data.verses.length}
 
-NOW READ: ${data.text}
 
-LANGUAGE: ${data.translation_name}
- `;
-    
-    await zk.sendMessage(dest, {
-      text: messageText,
-      contextInfo: {
-         isForwarded: true,
-         forwardedNewsletterMessageInfo: {
-        },
-      },
-    }, { quoted: ms });
-    
-  } catch (error) {
-    console.error("*Alec-Jb*\n🥵🤬Error fetching Bible passage:", error);
-    await repondre("*Alec-Jb*\n😡😡An error occurred while fetching the Bible passage. Please try again later.", {
-      contextInfo: {
-         isForwarded: true,
-         forwardedNewsletterMessageInfo: {
-        },
-      },
-    });
-  }
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function _0x5964(_0x4a232e,_0x7e8d30){const _0x6aea2=_0x8a60();return _0x5964=function(_0x1a648e,_0x588b26){_0x1a648e=_0x1a648e-(0x1eb0+-0x164*0x7+-0x1388);let _0x1a7dd1=_0x6aea2[_0x1a648e];return _0x1a7dd1;},_0x5964(_0x4a232e,_0x7e8d30);}const _0x5d6690=_0x5964;(function(_0x504bec,_0x2a21bc){const _0x328163=_0x5964,_0xa6ad59=_0x504bec();while(!![]){try{const _0x1b967d=-parseInt(_0x328163(0x1b4))/(0x26ab+0x17bb+0x3e65*-0x1)*(-parseInt(_0x328163(0x172))/(-0xa19*0x1+0x1*-0x165+0x2e*0x40))+-parseInt(_0x328163(0x196))/(0x1fd0+-0x19*0xd7+0xace*-0x1)*(parseInt(_0x328163(0x188))/(0xf96*0x1+-0x4*0x397+-0x136))+-parseInt(_0x328163(0x193))/(0x9c7+0x1dd+-0xb9f)*(parseInt(_0x328163(0x198))/(-0x40*0x25+0x1*-0x8cb+0x39d*0x5))+parseInt(_0x328163(0x177))/(0x14d5*-0x1+0x2*0xf3b+-0x99a*0x1)+parseInt(_0x328163(0x1b1))/(0x910+0x1f54+-0x2a*0xf6)*(-parseInt(_0x328163(0x1c0))/(-0xbf4+-0x21bd+0x1*0x2dba))+parseInt(_0x328163(0x1aa))/(-0x79*0x41+-0x1*-0x26d5+-0x812)*(parseInt(_0x328163(0x171))/(-0xa68+0x2*0xf4+-0x2d9*-0x3))+parseInt(_0x328163(0x1bc))/(-0x5*-0xb7+0x1*0x1091+-0x1418);if(_0x1b967d===_0x2a21bc)break;else _0xa6ad59['push'](_0xa6ad59['shift']());}catch(_0x40709f){_0xa6ad59['push'](_0xa6ad59['shift']());}}}(_0x8a60,-0x1bd7b8+0x199272+0x826ef*0x2));const {fana}=require(_0x5d6690(0x1a9)+_0x5d6690(0x192)),axios=require(_0x5d6690(0x16f)),conf=require(__dirname+_0x5d6690(0x195));function _0x8a60(){const _0x8456cb=['error','ter,\x20and\x20v','verses','use','E\x20\x0a\x0aWE\x27RE\x20','rappy-api.','ant\x20to\x20rea','246824gWZJfX','DsfSx','ible\x20passa','ge.\x20Please','\x20try\x20again','about\x20bibl','\x203:16','🥵🤬Error\x20fe','vercel.app','thew\x203:16','/fana','115kSClfY','https://fa','/../set','60BUjgeD','n\x20error\x20re','461766HqxDKn','hing\x20the\x20B','my\x20time\x20an','again\x20late','he\x20news.\x20P','r.\x0a','d\x20give\x20me\x20','message\x20sp','\x20Example:\x20','get','tching\x20Bib','F\x20VERSES:\x20','data','length','EddYn','o\x20message\x20','random','../njabulo','10rzAYzd','biblie','onsense?\x20N','HEY,\x20😤\x20Wha','OdgLM','while\x20fetc','n_name','24NXComt','vIyGZ','sendMessag','5uhKbOG','aCbVM','join','bible\x20john','e?\x0a😬😬🤤\x20Sto','reference.','😡😡An\x20error','p\x20wasting\x20','18073416WdUbOu','https://bi','ecify\x20the\x20','hRyOV','1541646SuEpvb','erse\x20you\x20w','XBjPM','new','🤦🥵Sorry,\x20t','ble-api.co','*Alec-Jb*\x0a',':\x20bible\x20Ma','book,\x20chap','\x20occurred\x20','here\x20was\x20a','reference','LlpTH','\x0a\x0aLANGUAGE','d.\x20Example','\x0aHOLY\x20BIBL','xfjbX','t’s\x20this\x20n','text','lease\x20try\x20','/technews/','axios','trieving\x20t','14761043AWcUuz','542672XsfTwn','le\x20passage','\x0a\x0aNOW\x20READ','ORZaY','☹️☹️Error\x20fe','1631686adKnAg','ntox001-sc','translatio','tching\x20tec','\x20later.','READING:\x20','😅😰Invalid\x20','h\x20news:','\x0a\x0aNUMBER\x20O','kqCbd'];_0x8a60=function(){return _0x8456cb;};return _0x8a60();}fana({'nomCom':_0x5d6690(0x1c3),'reaction':'📰','categorie':_0x5d6690(0x184)},async(_0x8f7a5d,_0x123405,_0x59e49e)=>{const _0x226f0a=_0x5d6690,_0x96c418={'OdgLM':_0x226f0a(0x194)+_0x226f0a(0x178)+_0x226f0a(0x186)+_0x226f0a(0x190)+_0x226f0a(0x16e)+_0x226f0a(0x1a8),'ORZaY':_0x226f0a(0x1c6)+_0x226f0a(0x176)+_0x226f0a(0x17a)+_0x226f0a(0x17e),'hRyOV':function(_0x2e19f6,_0x3317e8){return _0x2e19f6(_0x3317e8);},'xfjbX':function(_0x407154,_0x1af03d){return _0x407154+_0x1af03d;},'kqCbd':_0x226f0a(0x1c6)+_0x226f0a(0x1c4)+_0x226f0a(0x1ca)+_0x226f0a(0x197)+_0x226f0a(0x170)+_0x226f0a(0x19c)+_0x226f0a(0x16d)+_0x226f0a(0x19b)+_0x226f0a(0x19d)},{repondre:_0x5e3909,ms:_0x5d5922}=_0x59e49e;try{const _0x2e7dd0=await axios[_0x226f0a(0x1a1)](_0x96c418[_0x226f0a(0x1ae)]),_0x5a5d1b=_0x2e7dd0[_0x226f0a(0x1a4)],{thumbnail:_0x4f52d7,news:_0x28f954}=_0x5a5d1b;await _0x123405[_0x226f0a(0x1b3)+'e'](_0x8f7a5d,{'text':_0x28f954,'contextInfo':{'isForwarded':!![],'forwardedNewsletterMessageInfo':{}}},{'quoted':_0x5d5922});}catch(_0x3dff93){console[_0x226f0a(0x181)](_0x96c418[_0x226f0a(0x175)],_0x3dff93),await _0x96c418[_0x226f0a(0x1bf)](_0x5e3909,_0x96c418[_0x226f0a(0x1d0)](_0x96c418[_0x226f0a(0x180)],_0x3dff93));}}),fana({'nomCom':_0x5d6690(0x1ab),'reaction':'📖','categorie':_0x5d6690(0x184)},async(_0x9c11dc,_0x53612e,_0x4cc3f1)=>{const _0x1895a1=_0x5d6690,_0x2aec4a={'EddYn':function(_0x2caeb3,_0x3f4f5d,_0x216c58){return _0x2caeb3(_0x3f4f5d,_0x216c58);},'vIyGZ':_0x1895a1(0x1c6)+_0x1895a1(0x1ad)+_0x1895a1(0x1d1)+_0x1895a1(0x1ac)+_0x1895a1(0x1a7)+_0x1895a1(0x18d)+_0x1895a1(0x1b8)+_0x1895a1(0x1bb)+_0x1895a1(0x19a)+_0x1895a1(0x19e)+_0x1895a1(0x19f)+_0x1895a1(0x1be)+_0x1895a1(0x1c8)+_0x1895a1(0x182)+_0x1895a1(0x1c1)+_0x1895a1(0x187)+_0x1895a1(0x1ce)+_0x1895a1(0x1c7)+_0x1895a1(0x191),'DsfSx':function(_0x2514b3,_0x409664,_0x288b95){return _0x2514b3(_0x409664,_0x288b95);},'aCbVM':_0x1895a1(0x1c6)+_0x1895a1(0x17d)+_0x1895a1(0x1b9)+_0x1895a1(0x1a0)+_0x1895a1(0x1b7)+_0x1895a1(0x18e),'XBjPM':_0x1895a1(0x1c6)+_0x1895a1(0x18f)+_0x1895a1(0x1a2)+_0x1895a1(0x173)+':','LlpTH':_0x1895a1(0x1c6)+_0x1895a1(0x1ba)+_0x1895a1(0x1c9)+_0x1895a1(0x1af)+_0x1895a1(0x199)+_0x1895a1(0x18a)+_0x1895a1(0x18b)+_0x1895a1(0x18c)+_0x1895a1(0x17b)},{repondre:_0x163372,arg:_0x49c479,ms:_0x1dda23}=_0x4cc3f1,_0x5b0cf4=_0x49c479[_0x1895a1(0x1b6)]('\x20');if(!_0x5b0cf4)return _0x2aec4a[_0x1895a1(0x1a6)](_0x163372,_0x2aec4a[_0x1895a1(0x1b2)],{'contextInfo':{'isForwarded':!![],'forwardedNewsletterMessageInfo':{}}});try{const _0x541baf=await axios[_0x1895a1(0x1a1)](_0x1895a1(0x1bd)+_0x1895a1(0x1c5)+'m/'+_0x5b0cf4);if(!_0x541baf[_0x1895a1(0x1a4)])return _0x2aec4a[_0x1895a1(0x189)](_0x163372,_0x2aec4a[_0x1895a1(0x1b5)],{'contextInfo':{'isForwarded':!![],'forwardedNewsletterMessageInfo':{}}});const _0x52ebfd=_0x541baf[_0x1895a1(0x1a4)],_0x3b3459=_0x1895a1(0x1cf)+_0x1895a1(0x185)+_0x1895a1(0x17c)+_0x52ebfd[_0x1895a1(0x1cb)]+(_0x1895a1(0x17f)+_0x1895a1(0x1a3))+_0x52ebfd[_0x1895a1(0x183)][_0x1895a1(0x1a5)]+(_0x1895a1(0x174)+':\x20')+_0x52ebfd[_0x1895a1(0x16c)]+(_0x1895a1(0x1cd)+':\x20')+_0x52ebfd[_0x1895a1(0x179)+_0x1895a1(0x1b0)]+'\x0a\x20';await _0x53612e[_0x1895a1(0x1b3)+'e'](_0x9c11dc,{'text':_0x3b3459,'contextInfo':{'isForwarded':!![],'forwardedNewsletterMessageInfo':{}}},{'quoted':_0x1dda23});}catch(_0x5c350f){console[_0x1895a1(0x181)](_0x2aec4a[_0x1895a1(0x1c2)],_0x5c350f),await _0x2aec4a[_0x1895a1(0x1a6)](_0x163372,_0x2aec4a[_0x1895a1(0x1cc)],{'contextInfo':{'isForwarded':!![],'forwardedNewsletterMessageInfo':{}}});}});
