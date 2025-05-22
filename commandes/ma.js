@@ -29,22 +29,31 @@ fana({ nomCom: "ma", categorie: "General" }, async (dest, zk, commandeOptions) =
     });
 
     moment.tz.setDefault ("Africa/nairobi");
+        const hour = moment().hour();
+    let greeting = "🌅ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ!";
+    if (hour >= 12 && hour < 18) {
+        greeting = "🌄ɢᴏᴏᴅ ᴀғᴛᴇʀɴɴᴏɴ!;
+    } else if (hour >= 18) {
+        greeting = "🌇ɢᴏᴏᴅ ᴇᴠᴇʀɴɪɴɢ!";
+    } else if (hour >= 22 || hour < 5) {
+        greeting = "🌌ɢᴏᴏᴅ ɴɪɢʜᴛ";
+    };
+    
 
 // Créer une date et une heure en GMT
 const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
-const imageUrl = 'https://files.catbox.moe/ya23yd.jpg';
-
+    
   let infoMsg =  `
 *╭─❖ 𓆩 🦋 𓆪 ❖─╮*
-*𓅓  MORNING  𓅓*
+     *Alec-Jb*
 *╰─❖ 𓆩 🦋 𓆪 ❖─╯* 
 *╭─❖*
 *┋🕵️ ʙᴏᴛ ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ*
 *┋📅 ᴅᴀᴛᴇ: ${date}*
 *┋⏰ ᴛɪᴍᴇ: ${temps}*
-*┋🫂ᴜsᴇʀs ᴜsᴇʀs:
-*┋🌇: 
+*┋🫂hallo: ${greeting}
+*┋📟ʀᴀᴍ* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())} 
 *╰─❖*
 
 > 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐓𝐄𝐂𝐇\n${readmore}`;
