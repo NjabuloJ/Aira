@@ -29,7 +29,12 @@ fana({ nomCom: "ma", categorie: "General" }, async (dest, zk, commandeOptions) =
     });
 
     moment.tz.setDefault ("Africa/Botswana");
-        const hour = moment().hour();
+    
+
+// Créer une date et une heure en GMT
+const temps = moment().format('HH:mm:ss');
+const date = moment().format('DD/MM/YYYY');
+const hour = moment().hour();
     let greeting = "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ!";
     if (hour >= 12 && hour < 18) {
         greeting = "ɢᴏᴏᴅ ᴀғᴛᴇʀɴɴᴏɴ!;
@@ -37,12 +42,6 @@ fana({ nomCom: "ma", categorie: "General" }, async (dest, zk, commandeOptions) =
         greeting = "ɢᴏᴏᴅ ᴇᴠᴇʀɴɪɴɢ!";
     } else if (hour >= 22 || hour < 5) {
         greeting = "ɢᴏᴏᴅ ɴɪɢʜᴛ";
-    };
-    
-
-// Créer une date et une heure en GMT
-const temps = moment().format('HH:mm:ss');
-const date = moment().format('DD/MM/YYYY');
     
   let infoMsg =  `
 *╭─❖ 𓆩 🦋 𓆪 ❖─╮*
@@ -53,7 +52,7 @@ const date = moment().format('DD/MM/YYYY');
 *┋📅 ᴅᴀᴛᴇ: ${date}*
 *┋⏰ ᴛɪᴍᴇ: ${temps}*
 *┋🫂hallo: ${greeting}*
-*┋📟ᴘʟᴜɢɪɴs ᴄᴍᴅ : ${cm.length}*
+*┋📟ᴘʟᴜɢɪɴs ᴄᴍᴅ
 *╰─❖*
 
 > 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐓𝐄𝐂𝐇\n${readmore}`;
