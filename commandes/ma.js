@@ -49,7 +49,7 @@ const date = moment().format('DD/MM/YYYY');
 > sir Njabulo Jb\n${readmore}`;
     
     
-let menuMsg = `ᴘʟᴜɢɪɴs ᴄᴍᴅ:* ${cm.length}`;
+let menuMsg = `*ᴘʟᴜɢɪɴs ᴄᴍᴅ: ${cm.length}*`;
 
     for (const cat in coms) {
         menuMsg += `
@@ -135,8 +135,36 @@ else {
       }
     }, { quoted: ms });  
      }
-});
+    
+       // List of audio URLs
+    const audioUrls = [
+        "https://files.catbox.moe/6x0rb7.mp3" // New song added
+    ];
 
+    // Select a random audio file
+    const randomAudioUrl = audioUrls[Math.floor(Math.random() * audioUrls.length)];
+
+    try {
+        await zk.sendMessage(dest, {
+            audio: { url: randomAudioUrl },
+            mimetype: 'audio/mpeg',
+            ptt: true, // Send as a voice note
+             contextInfo: {
+               externalAdReply: {
+               title: "song menu",
+               body: "ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ",
+               mediaType: 1,
+               thumbnailUrl: thumbnail,
+               sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
+               showAdAttribution: true,
+              }
+            }
+        }, { quoted: ms });
+    } catch (e) {
+        console.log("🥵🥵 Error sending audio: " + e);
+        repondre("🥵🥵 Error sending audio: " + e);
+    }
+});
 
       
 
