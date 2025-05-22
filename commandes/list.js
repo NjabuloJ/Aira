@@ -75,7 +75,7 @@ fana({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions)
                         thumbnailUrl: imageUrl,
                         sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
                         showAdAttribution: true,
-                        [renderType]: true, // Apply correct thumbnail size
+                        
                     },
                 },
             }, { quoted: ms });
@@ -91,7 +91,6 @@ fana({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions)
                         thumbnailUrl: imageUrl,
                         sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
                         showAdAttribution: true,
-                        [renderType]: true, // Apply correct thumbnail size
                     },
                 },
             }, { quoted: ms });
@@ -122,7 +121,6 @@ fana({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions)
                thumbnailUrl: imageUrl,
                sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
                showAdAttribution: true,
-              [renderType]: true, // Apply correct thumbnail size
               },
             },
         }, { quoted: ms });
