@@ -86,7 +86,6 @@ ${commandList}`;
         if (mediaUrl.match(/\.(mp4|gif)$/i)) {
             await zk.sendMessage(dest, {
                 caption: infoMsg,
-                footer: "njabulo, developed by njabulo",
                 gifPlayback: true,
                 contextInfo: {
                     externalAdReply: {
@@ -96,14 +95,13 @@ ${commandList}`;
                         mediaType: 1,
                         sourceUrl: "https://whatsapp.com/channel/0029VakUEfb4o7qVdkwPk83E",
                         showAdAttribution: true,
-                        [renderType]: true, // Apply correct thumbnail size
+                        renderLargerThumbnail: true
                     },
                 },
             }, { quoted: ms });
         } else {
             await zk.sendMessage(dest, {
                 caption: infoMsg,
-                footer: "njabulo*, developed by njabulo",
                 contextInfo: {
                     externalAdReply: {
                         title: "Alec-Jb",
@@ -112,7 +110,7 @@ ${commandList}`;
                         mediaType: 1,
                         sourceUrl: "https://whatsapp.com/channel/0029VakUEfb4o7qVdkwPk83E",
                         showAdAttribution: true,
-                        [renderType]: true, // Apply correct thumbnail size
+                        renderLargerThumbnail: true
                     },
                 },
             }, { quoted: ms });
