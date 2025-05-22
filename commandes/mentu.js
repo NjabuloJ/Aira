@@ -92,9 +92,9 @@ ${commandList}`;
                         title: "Alec-Jb",
                         body: "Tap here to Join our official channel!",
                         thumbnailUrl: thumbnail,
-                        mediaType: 1,
                         sourceUrl: "https://whatsapp.com/channel/0029VakUEfb4o7qVdkwPk83E",
                         showAdAttribution: true,
+                        mediaType: 1,
                         renderLargerThumbnail: true
                     },
                 },
@@ -107,9 +107,9 @@ ${commandList}`;
                         title: "Alec-Jb",
                         body: "Tap here to Join our official channel!",
                         thumbnailUrl: thumbnail,
-                        mediaType: 1,
                         sourceUrl: "https://whatsapp.com/channel/0029VakUEfb4o7qVdkwPk83E",
                         showAdAttribution: true,
+                        mediaType: 1,
                         renderLargerThumbnail: true
                     },
                 },
