@@ -36,20 +36,16 @@ const date = moment().format('DD/MM/YYYY');
 const imageUrl = 'https://files.catbox.moe/ya23yd.jpg';
 
   let infoMsg =  `
-╭━━━《 *𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃* 》━━━┈⊷
-┃❍╭──────────────
-┃❍│▸  *ᴅᴀᴛᴇ*: ${date}
-┃❍│▸  *ᴛɪᴍᴇ ɴᴏᴡ*: ${temps}
-┃❍│▸  *ᴘʀᴇғɪx* : [  ${s.PREFIXE}  ]
-┃❍┃▸  *ᴍᴏᴅᴇ* :  ${mode} mode
-┃❍┃▸  *ᴘʟᴜɢɪɴs* : ${cm.length}
-┃❍┃▸  *ʀᴀᴍ* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-┃❍│▸  *ʀᴜɴɴɪɴɢ ᴏɴ* : ${os.platform()}
-┃❍│▸  *ᴏᴡɴᴇʀ* :  ${s.OWNER_NAME}
-┃❍│▸  *ᴅᴇᴠᴇʟᴏᴘᴇʀ* : ᴄᴀsᴇʏʀʜᴏᴅᴇs ᴛᴇᴄʜ
-┃❍│▸  *ᴛɪᴍᴇᴢᴏɴᴇ* : ${s.TZ}
-┃❍╰───────────────
-╰━━━━━━━━━━━━━━━┈⊷
+*╭─❖ 𓆩 🦋 𓆪 ❖─╮*
+*𓅓  MORNING  𓅓*
+*╰─❖ 𓆩 🦋 𓆪 ❖─╯* 
+*╭─❖*
+*┋🕵️ ʙᴏᴛ ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ*
+*┋📅 ᴅᴀᴛᴇ: ${date}*
+*┋⏰ ᴛɪᴍᴇ: ${temps}*
+*┋🫂ᴜsᴇʀs ᴜsᴇʀs: ${formattedTotalUsers}*
+*┋🌇: 
+*╰─❖*
 
 > 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐓𝐄𝐂𝐇\n${readmore}`;
     
@@ -82,10 +78,10 @@ let menuMsg = `
        footer: "*Njabulo Jb*, developed by Njabulo",
         gifPlayback: true,
         externalAdReply: {
-          title: "𝐓𝐇𝐄 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃 𝐌𝐔𝐋𝐓𝐈 𝐃𝐄𝐕𝐈𝐂𝐄",
-          body: "Follow my channel for more updates",
+          title: "Alec-Jb",
+          body: "public bot",
           mediaType: 1,
-          thumbnailUrl: "https://i.ibb.co/3YVC86md/lordcasey.jpg",
+          thumbnailUrl: "https://files.catbox.moe/2d2gvj.jpg",
          sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
          renderLargerThumbnail: true,
          showAdAttribution: true,
@@ -107,10 +103,10 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
       contextInfo: {
         footer: "*Njabulo_Jb*, developed by Njabulo",
         externalAdReply: {
-          title: "𝐓𝐇𝐄 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃 𝐌𝐔𝐋𝐓𝐈 𝐃𝐄𝐕𝐈𝐂𝐄",
-          body: "Follow my channel for more updates",
+          title: "Alec-Jb",
+          body: "public bot",
           mediaType: 1,
-          thumbnailUrl: "https://i.ibb.co/3YVC86md/lordcasey.jpg",
+          thumbnailUrl: "https://files.catbox.moe/2d2gvj.jpg",
          sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
         renderLargerThumbnail: true,
          showAdAttribution: true,
@@ -131,10 +127,10 @@ else {
      gifPlayback: true,
       contextInfo: {
         externalAdReply: {
-          title: "𝐓𝐇𝐄 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃 𝐌𝐔𝐋𝐓𝐈 𝐃𝐄𝐕𝐈𝐂𝐄",
-          body: "Follow my channel for more updates",
+          title: "Alec-Jb",
+          body: "public bot",
           mediaType: 1,
-          thumbnailUrl: "https://i.ibb.co/3YVC86md/lordcasey.jpg",
+          thumbnailUrl: "https://files.catbox.moe/2d2gvj.jpg",
          sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
         renderLargerThumbnail: true,
          showAdAttribution: true,
