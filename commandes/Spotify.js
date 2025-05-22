@@ -11,7 +11,7 @@ fana({
 
   // Check if there is a query in the arguments
   if (!arg[0]) {
-    return repondre('🤦Please provide a query!');
+    return repondre('*Alec-Jb*\n 😤 What’s this nonsense? please give me queey? \n🤥🤦Stop wasting my time and provide a query!');
   }
 
   try {
@@ -21,7 +21,7 @@ fana({
 
     // Check if searchData contains tracks
     if (!searchData || searchData.length === 0) {
-      return repondre("⁉️No Spotify search results found.");
+      return repondre("*Alec-Jb*\n⁉️🤷No Spotify search results found.\n🙋hey or try again later");
     }
 
     // Construct playlist message
@@ -53,7 +53,7 @@ fana({
 
   } catch (error) {
     // Send error message
-    repondre(`❌Error: ${error.message}`);
+    repondre(`*Alec-Jb*\nflop you did 🥺 see❌Error: ${error.message}`);
     console.error(error);
   }
 })
