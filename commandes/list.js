@@ -64,7 +64,6 @@ fana({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions)
     try {
         if (imageUrl.match(/\.(mp4|gif)$/i)) {
             await zk.sendMessage(dest, {
-                video: { url: mediaUrl },
                 caption: infoMsg,
                 footer: "*Njabulo Jb*, developed by Njabulo",
                 gifPlayback: true,
@@ -73,7 +72,7 @@ fana({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions)
                         title: "Njabulo Jb",
                         body: "ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ",
                         mediaType: 1,
-                        thumbnailUrl: thumbnail,
+                        thumbnailUrl: imageUrl,
                         sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
                         showAdAttribution: true,
                         [renderType]: true, // Apply correct thumbnail size
@@ -82,7 +81,6 @@ fana({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions)
             }, { quoted: ms });
         } else {
             await zk.sendMessage(dest, {
-                image: { url: mediaUrl },
                 caption: infoMsg,
                 footer: "*Njabulo_Jb*, developed by Njabulo",
                 contextInfo: {
@@ -90,7 +88,7 @@ fana({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions)
                         title: "Njabulo Jb",
                         body: "ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ",
                         mediaType: 1,
-                        thumbnailUrl: thumbnail,
+                        thumbnailUrl: imageUrl,
                         sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
                         showAdAttribution: true,
                         [renderType]: true, // Apply correct thumbnail size
@@ -121,7 +119,7 @@ fana({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions)
                title: "song menu",
                body: "ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ",
                mediaType: 1,
-               thumbnailUrl: thumbnail,
+               thumbnailUrl: imageUrl,
                sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
                showAdAttribution: true,
               [renderType]: true, // Apply correct thumbnail size
