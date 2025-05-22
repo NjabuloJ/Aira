@@ -4,7 +4,7 @@ const axios = require('axios');
 const conf = require(__dirname + "/../set");
 
 fana({
-  nomCom: "technews",
+  nomCom: "new",
   reaction: '📰',
   categorie: 'use'
 }, async (dest, zk, context) => {
@@ -21,16 +21,13 @@ fana({
       contextInfo: {
          isForwarded: true,
          forwardedNewsletterMessageInfo: {
-         newsletterJid: '120363345407274799@newsletter',
-         newsletterName: "vw golf",
-         serverMessageId: 143,
         },
       },
     }, { quoted: ms });
 
   } catch (error) {
-    console.error("Error fetching tech news:", error);
-    await repondre("Sorry, there was an error retrieving the news. Please try again later.\n" + error);
+    console.error("*Alec-Jb*\n☹️☹️Error fetching tech news:", error);
+    await repondre("*Alec-Jb*\n🤦🥵Sorry, there was an error retrieving the news. Please try again later.\n" + error);
   }
 });
 
@@ -44,12 +41,10 @@ fana({
   const reference = arg.join(" ");
   
   if (!reference) {
-    return repondre("Please specify the book, chapter, and verse you want to read. Example: bible Mathew 3:16", {
+    return repondre("*Alec-Jb*\nHEY,  😤 What’s this nonsense? No message about bible?\n😬😬🤤 Stop wasting my time and give me message specify the book, chapter, and verse you want to read. Example: bible Mathew 3:16", {
       contextInfo: {
          isForwarded: true,
          forwardedNewsletterMessageInfo: {
-         newsletterJid: '120363345407274799@newsletter',
-         newsletterName: "vw golf",
          serverMessageId: 143,
         },
       },
@@ -60,12 +55,10 @@ fana({
     const response = await axios.get(`https://bible-api.com/${reference}`);
     
     if (!response.data) {
-      return repondre("Invalid reference. Example: bible john 3:16", {
+      return repondre("*Alec-Jb*\n😅😰Invalid reference. Example: bible john 3:16", {
         contextInfo: {
          isForwarded: true,
          forwardedNewsletterMessageInfo: {
-         newsletterJid: '120363345407274799@newsletter',
-         newsletterName: "vw golf",
          serverMessageId: 143,
           },
         },
@@ -74,15 +67,15 @@ fana({
     
     const data = response.data;
     const messageText = `
-ᕙ⁠ VW GOLF HOLY BIBLE ᕗ
+HOLY BIBLE 
 
-⁠ *_WE'RE READING:_* ${data.reference}
+WE'RE READING: ${data.reference}
 
-⁠ *_NUMBER OF VERSES:_* ${data.verses.length}
+NUMBER OF VERSES: ${data.verses.length}
 
-⁠ *_NOW READ:_* ${data.text}
+NOW READ: ${data.text}
 
-⁠ *_LANGUAGE:_* ${data.translation_name}
+LANGUAGE: ${data.translation_name}
  `;
     
     await zk.sendMessage(dest, {
@@ -90,21 +83,17 @@ fana({
       contextInfo: {
          isForwarded: true,
          forwardedNewsletterMessageInfo: {
-         newsletterJid: '120363345407274799@newsletter',
-         newsletterName: "vw golf",
          serverMessageId: 143,
         },
       },
     }, { quoted: ms });
     
   } catch (error) {
-    console.error("Error fetching Bible passage:", error);
-    await repondre("An error occurred while fetching the Bible passage. Please try again later.", {
+    console.error("*Alec-Jb*\n🥵🤬Error fetching Bible passage:", error);
+    await repondre("*Alec-Jb*\n😡😡An error occurred while fetching the Bible passage. Please try again later.", {
       contextInfo: {
          isForwarded: true,
          forwardedNewsletterMessageInfo: {
-         newsletterJid: '120363345407274799@newsletter',
-         newsletterName: "vw golf",
          serverMessageId: 143,
         },
       },
