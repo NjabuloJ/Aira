@@ -1,4 +1,4 @@
-const {fan} = require('../njabulo/fana');
+const {fana} = require('../njabulo/fana');
 const fs = require('fs');
 const getFBInfo = require("@xaviabot/fb-downloader");
 const { default: axios } = require('axios');
