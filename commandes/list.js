@@ -71,7 +71,6 @@ fana({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions)
                     externalAdReply: {
                         title: "Njabulo Jb",
                         body: "ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ",
-                        mediaType: 1,
                         thumbnailUrl: imageUrl,
                         sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
                         showAdAttribution: true,
@@ -87,7 +86,6 @@ fana({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions)
                     externalAdReply: {
                         title: "Njabulo Jb",
                         body: "ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ",
-                        mediaType: 1,
                         thumbnailUrl: imageUrl,
                         sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
                         showAdAttribution: true,
