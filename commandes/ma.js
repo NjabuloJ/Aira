@@ -154,7 +154,7 @@ else {
                title: "song menu",
                body: "ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ",
                mediaType: 1,
-               thumbnailUrl: thumbnail,
+               thumbnailUrl: "https://files.catbox.moe/2d2gvj.jpg",
                sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
                showAdAttribution: true,
               }
