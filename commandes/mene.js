@@ -77,6 +77,9 @@ let menuMsg = `
         zk.sendMessage(dest, {
       text: infoMsg + menuMsg,
       contextInfo: {
+     isForwarded: true,
+        forwardedNewsletterMessageInfo: {
+        serverMessageId: 143,
         externalAdReply: {
           title: "𝐓𝐇𝐄 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃 𝐌𝐔𝐋𝐓𝐈 𝐃𝐄𝐕𝐈𝐂𝐄",
           body: "Follow my channel for more updates",
@@ -101,6 +104,9 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
         zk.sendMessage(dest, {
       text: infoMsg + menuMsg,
       contextInfo: {
+      isForwarded: true,
+        forwardedNewsletterMessageInfo: {
+        serverMessageId: 143,
         externalAdReply: {
           title: "𝐓𝐇𝐄 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃 𝐌𝐔𝐋𝐓𝐈 𝐃𝐄𝐕𝐈𝐂𝐄",
           body: "Follow my channel for more updates",
@@ -123,6 +129,9 @@ else {
     zk.sendMessage(dest, {
       text: infoMsg + menuMsg,
       contextInfo: {
+      isForwarded: true,
+        forwardedNewsletterMessageInfo: {
+        serverMessageId: 143,
         externalAdReply: {
           title: "𝐓𝐇𝐄 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃 𝐌𝐔𝐋𝐓𝐈 𝐃𝐄𝐕𝐈𝐂𝐄",
           body: "Follow my channel for more updates",
