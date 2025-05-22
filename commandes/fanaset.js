@@ -344,7 +344,7 @@ fana({
 });
 
 fana({
-  nomCom: 'publicmode',
+  nomCom: 'public',
   categorie: "Control"
 }, async (chatId, zk, context) => {
   const { ms, repondre, superUser, auteurMessage, arg } = context;
@@ -356,7 +356,7 @@ fana({
 
   // Validate user input and respond accordingly
   if (!arg[0]) {
-    return repondre('Instructions:\n\nType "publicmode yes" to enable or "publicmode no" to disable.');
+    return repondre('*Alec-Jb*\n😡Instructions:\n\nType "public yes" to enable or "public no" to disable.');
   }
 
   const option = arg.join(' ').toLowerCase();
@@ -372,7 +372,7 @@ fana({
       break;
 
     default:
-      return repondre("Please don't invent an option. Type 'publicmode yes' or 'publicmode no'.");
+      return repondre("*Alec-Jb*\n😡Please don't invent an option. Type 'public yes' or 'public no'.");
   }
 
   // Send the response message to the user
@@ -508,7 +508,7 @@ fana({
 });
 
 fana({
-  nomCom: 'privatemode',
+  nomCom: 'private',
   categorie: "Control"
 }, async (chatId, zk, context) => {
   const { ms, repondre, superUser, auteurMessage, arg } = context;
@@ -536,7 +536,7 @@ fana({
       break;
 
     default:
-      return repondre("Please don't invent an option. Type 'privatemode yes' or 'privatemode no'.");
+      return repondre("*Alec-Jb*\n😡Please don't invent an option. Type 'private yes' or 'private no'.");
   }
 
   // Send the response message to the user
