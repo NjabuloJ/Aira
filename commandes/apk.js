@@ -17,7 +17,7 @@ fana({
   // Check if app name is provided
   const appName = arg.join(" ");
   if (!appName) {
-    return repondre("Please provide an app name.");
+    return repondre("*Alec-Jb*\nDON’T WASTE MY VIBES! Give me an app name.Faded!\n like.apk WhatsApp business 😡\n");
   }
 
   try {
@@ -27,7 +27,7 @@ fana({
 
     // Check if any results were found
     if (!searchData.BK9 || searchData.BK9.length === 0) {
-      return repondre("No app found with that name, please try again.");
+      return repondre("*Alec-Jb*\n don't crying my e😡🤬NO app ! Your query is TRASH! Try again! 😣\n.");
     }
 
     // Fetch the APK details for the first result
@@ -57,8 +57,8 @@ fana({
 
   } catch (error) {
     // Catch any errors and notify the user
-    console.error("Error during APK download process:", error);
-    repondre("APK download failed. Please try again later.");
+    console.error("*Alec-Jb*\n🥵🥵Error during APK download process:", error);
+    repondre("*Alec-Jb*\n🤣🤣APK download failed. Please try again later.");
   }
 });
 
