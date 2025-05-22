@@ -54,36 +54,8 @@ fana({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions)
 
 ${commandList}`;
             
-   
-    // Two sets of images to display randomly
-    const extraImages1 = [
-        "https://files.catbox.moe/sbe1io.jpg",
-        "https://files.catbox.moe/8te9a3.jpg",
-        "https://files.catbox.moe/2d2gvj.jpg"
-    ];
-
-    const extraImages2 = [
-        "https://files.catbox.moe/sbe1io.jpg",
-        "https://files.catbox.moe/8te9a3.jpg",
-        "https://files.catbox.moe/2d2gvj.jpg"
-    ];
-
-    // Randomly select which menu to show
-    const isOriginalMenu = Math.random() > 0.5; // 50% chance for either menu
-
-    let mediaUrl, thumbnail, renderType;
-    if (isOriginalMenu) {
-        mediaUrl = mybotpic(); // Use bot’s original picture
-        thumbnail = extraImages1[Math.floor(Math.random() * extraImages1.length)];
-        renderType = "renderLargerThumbnail";
-    } else {
-        mediaUrl = extraImages2[Math.floor(Math.random() * extraImages2.length)];
-        thumbnail = mediaUrl; // Use the same image as media
-        renderType = "renderSmallThumbnail";
-    }
 
     try {
-        if (mediaUrl.match(/\.(mp4|gif)$/i)) {
             await zk.sendMessage(dest, {
                 caption: infoMsg,
                 gifPlayback: true,
