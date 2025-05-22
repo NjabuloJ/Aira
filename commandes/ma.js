@@ -71,7 +71,6 @@ let menuMsg = `
    if (lien.match(/\.(mp4|gif)$/i)) {
     try {
         zk.sendMessage(dest, {
-      image: { url: imageUrl },
       text: infoMsg + menuMsg,
       contextInfo: {
        footer: "*Njabulo Jb*, developed by Njabulo",
@@ -97,7 +96,6 @@ let menuMsg = `
 else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
     try {
         zk.sendMessage(dest, {
-     image: { url: imageUrl },
       text: infoMsg + menuMsg,
       contextInfo: {
         footer: "*Njabulo_Jb*, developed by Njabulo",
@@ -120,7 +118,6 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
 } 
 else {
     zk.sendMessage(dest, {
-   image: { url: imageUrl },
       text: infoMsg + menuMsg,
      footer: "*Njabulo Jb*, developed by Njabulo",
      gifPlayback: true,
