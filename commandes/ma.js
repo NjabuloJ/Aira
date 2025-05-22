@@ -85,8 +85,7 @@ let menuMsg = `
           thumbnailUrl: "https://i.ibb.co/3YVC86md/lordcasey.jpg",
           sourceUrl: conf.GURL,
           mediaType: 1,
-            renderLargerThumbnail: true,
-
+         renderLargerThumbnail: true,
           showAdAttribution: false
         }
       }
@@ -110,8 +109,7 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
           thumbnailUrl: "https://files.catbox.moe/yedfbr.jpg",
           sourceUrl: conf.GURL,
           mediaType: 1,
-            renderLargerThumbnail: true,
-
+          renderLargerThumbnail: true,
           showAdAttribution: false
         }
       }
@@ -125,6 +123,8 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
 else {
     zk.sendMessage(dest, {
       text: infoMsg + menuMsg,
+     footer: "*Njabulo Jb*, developed by Njabulo",
+     gifPlayback: true,
       contextInfo: {
         externalAdReply: {
           title: "𝐓𝐇𝐄 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐌𝐃 𝐌𝐔𝐋𝐓𝐈 𝐃𝐄𝐕𝐈𝐂𝐄",
@@ -132,9 +132,8 @@ else {
           thumbnailUrl: "https://files.catbox.moe/yedfbr.jpg",
           sourceUrl: conf.GURL,
           mediaType: 1,
-            renderLargerThumbnail: true
-
-
+         renderLargerThumbnail: true,
+        showAdAttribution: false
         }
       }
     }, { quoted: ms });
