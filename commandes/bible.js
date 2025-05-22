@@ -45,7 +45,6 @@ fana({
       contextInfo: {
          isForwarded: true,
          forwardedNewsletterMessageInfo: {
-         serverMessageId: 143,
         },
       },
     });
@@ -59,7 +58,6 @@ fana({
         contextInfo: {
          isForwarded: true,
          forwardedNewsletterMessageInfo: {
-         serverMessageId: 143,
           },
         },
       });
@@ -83,7 +81,6 @@ LANGUAGE: ${data.translation_name}
       contextInfo: {
          isForwarded: true,
          forwardedNewsletterMessageInfo: {
-         serverMessageId: 143,
         },
       },
     }, { quoted: ms });
@@ -94,7 +91,6 @@ LANGUAGE: ${data.translation_name}
       contextInfo: {
          isForwarded: true,
          forwardedNewsletterMessageInfo: {
-         serverMessageId: 143,
         },
       },
     });
