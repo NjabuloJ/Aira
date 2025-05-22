@@ -35,11 +35,11 @@ const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
-*╭─❖ 𓆩 🦋 𓆪 ❖─╮*
-     *Alec-Jb*
-*╰─❖ 𓆩 🦋 𓆪 ❖─╯* 
+*╭─•❖ 𓆩 🦋 𓆪 ❖•─╮*
+  𝐀𝐋𝐄𝐂-𝐉𝐁 𝐏𝐔𝐁𝐋𝐈𝐂 
+*╰─•❖ 𓆩 🦋 𓆪 ❖•─╯* 
 *╭─❖*
-*┋🕵️ ʙᴏᴛ ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ*
+*┋🕵️ ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ*
 *┋📅 ᴅᴀᴛᴇ:* ${date}
 *┋⏰ ᴛɪᴍᴇ:* ${temps}
 *┋🏹ᴘʀᴇғɪx: [ ${prefixe} ]*
@@ -49,13 +49,11 @@ const date = moment().format('DD/MM/YYYY');
 > sir Njabulo Jb\n${readmore}`;
     
     
-let menuMsg = `
-
- *𝐀𝐕𝐀𝐈𝐋𝐀𝐁𝐋𝐄 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒*`;
+let menuMsg = ``;
 
     for (const cat in coms) {
         menuMsg += `
-*${cat}
+*${cat}*
 *╭─❖*`;
         for (const cmd of coms[cat]) {
             menuMsg += `
@@ -135,9 +133,43 @@ else {
          showAdAttribution: true,
         }
       }
-    }, { quoted: ms });
-    
-}
+    }, { quoted: ms });  
+     }
+    } catch (e) {
+        console.log("🥵🥵 Error sending menu: " + e);
+        repondre("🥵🥵 Error sending menu: " + e);
+    }
 
+    // List of audio URLs
+    const audioUrls = [
+        "https://files.catbox.moe/6x0rb7.mp3" // New song added
+    ];
+
+    // Select a random audio file
+    const randomAudioUrl = audioUrls[Math.floor(Math.random() * audioUrls.length)];
+
+    try {
+        await zk.sendMessage(dest, {
+            audio: { url: randomAudioUrl },
+            mimetype: 'audio/mpeg',
+            ptt: true, // Send as a voice note
+             contextInfo: {
+               externalAdReply: {
+               title: "song menu",
+               body: "ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ",
+               mediaType: 1,
+               thumbnailUrl: "https://files.catbox.moe/2d2gvj.jpg",
+               sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
+               showAdAttribution: true,
+              },
+            },
+        }, { quoted: ms });
+    } catch (e) {
+        console.log("🥵🥵 Error sending audio: " + e);
+        repondre("🥵🥵 Error sending audio: " + e);
+    }
 });
+
+
+      
 
