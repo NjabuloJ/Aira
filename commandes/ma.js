@@ -135,39 +135,6 @@ else {
       }
     }, { quoted: ms });  
      }
-    } catch (e) {
-        console.log("🥵🥵 Error sending menu: " + e);
-        repondre("🥵🥵 Error sending menu: " + e);
-    }
-
-    // List of audio URLs
-    const audioUrls = [
-        "https://files.catbox.moe/6x0rb7.mp3" // New song added
-    ];
-
-    // Select a random audio file
-    const randomAudioUrl = audioUrls[Math.floor(Math.random() * audioUrls.length)];
-
-    try {
-        await zk.sendMessage(dest, {
-            audio: { url: randomAudioUrl },
-            mimetype: 'audio/mpeg',
-            ptt: true, // Send as a voice note
-             contextInfo: {
-               externalAdReply: {
-               title: "song menu",
-               body: "ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ",
-               mediaType: 1,
-               thumbnailUrl: "https://files.catbox.moe/2d2gvj.jpg",
-               sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
-               showAdAttribution: true,
-              },
-            },
-        }, { quoted: ms });
-    } catch (e) {
-        console.log("🥵🥵 Error sending audio: " + e);
-        repondre("🥵🥵 Error sending audio: " + e);
-    }
 });
 
 
