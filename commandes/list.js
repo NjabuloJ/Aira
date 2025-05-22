@@ -65,22 +65,6 @@ fana({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions)
         if (imageUrl.match(/\.(mp4|gif)$/i)) {
             await zk.sendMessage(dest, {
                 caption: infoMsg,
-                footer: "*Njabulo Jb*, developed by Njabulo",
-                gifPlayback: true,
-                contextInfo: {
-                    externalAdReply: {
-                        title: "Njabulo Jb",
-                        body: "ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ",
-                        thumbnailUrl: imageUrl,
-                        sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
-                        showAdAttribution: true,
-                        
-                    },
-                },
-            }, { quoted: ms });
-        } else {
-            await zk.sendMessage(dest, {
-                caption: infoMsg,
                 footer: "*Njabulo_Jb*, developed by Njabulo",
                 contextInfo: {
                     externalAdReply: {
