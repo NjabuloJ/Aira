@@ -49,7 +49,7 @@ const date = moment().format('DD/MM/YYYY');
 > sir Njabulo Jb\n${readmore}`;
     
     
-let menuMsg = ``;
+let menuMsg = `ᴘʟᴜɢɪɴs ᴄᴍᴅ:* ${cm.length}`;
 
     for (const cat in coms) {
         menuMsg += `
