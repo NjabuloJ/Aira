@@ -87,6 +87,7 @@ let menuMsg = `
           mediaType: 1,
           thumbnailUrl: "https://i.ibb.co/3YVC86md/lordcasey.jpg",
          sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
+         renderLargerThumbnail: true,
          showAdAttribution: true,
         }
       }
@@ -111,6 +112,7 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
           mediaType: 1,
           thumbnailUrl: "https://i.ibb.co/3YVC86md/lordcasey.jpg",
          sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
+        renderLargerThumbnail: true,
          showAdAttribution: true,
         }
       }
@@ -134,6 +136,7 @@ else {
           mediaType: 1,
           thumbnailUrl: "https://i.ibb.co/3YVC86md/lordcasey.jpg",
          sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
+        renderLargerThumbnail: true,
          showAdAttribution: true,
         }
       }
