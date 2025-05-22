@@ -88,14 +88,13 @@ ${commandList}`;
                 caption: infoMsg,
                 gifPlayback: true,
                 contextInfo: {
-                    externalAdReply: {
-                        title: "Alec-Jb",
-                        body: "Tap here to Join our official channel!",
-                        thumbnailUrl: thumbnail,
-                        sourceUrl: "https://whatsapp.com/channel/0029VakUEfb4o7qVdkwPk83E",
-                        showAdAttribution: true,
-                        mediaType: 1,
-                        renderLargerThumbnail: true
+                externalAdReply: {
+                    title: "𝗡𝗝𝗔𝗕𝗨𝗟𝗢 𝗝𝗕 𝗠𝗘𝗡𝗨 𝗟𝗜𝗦𝗧",
+                    body: "Tap here my friend join channel update",
+                    thumbnailUrl: "https://files.catbox.moe/60hwdx.jpeg",
+                    sourceUrl: "https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T",
+                    mediaType: 1,
+                    renderLargerThumbnail: true
                     },
                 },
             }, { quoted: ms });
@@ -103,14 +102,13 @@ ${commandList}`;
             await zk.sendMessage(dest, {
                 caption: infoMsg,
                 contextInfo: {
-                    externalAdReply: {
-                        title: "Alec-Jb",
-                        body: "Tap here to Join our official channel!",
-                        thumbnailUrl: thumbnail,
-                        sourceUrl: "https://whatsapp.com/channel/0029VakUEfb4o7qVdkwPk83E",
-                        showAdAttribution: true,
-                        mediaType: 1,
-                        renderLargerThumbnail: true
+                externalAdReply: {
+                    title: "𝗡𝗝𝗔𝗕𝗨𝗟𝗢 𝗝𝗕 𝗠𝗘𝗡𝗨 𝗟𝗜𝗦𝗧",
+                    body: "Tap here my friend join channel update",
+                    thumbnailUrl: "https://files.catbox.moe/60hwdx.jpeg",
+                    sourceUrl: "https://whatsapp.com/channel/0029VarYP5iAInPtfQ8fRb2T",
+                    mediaType: 1,
+                    renderLargerThumbnail: true
                     },
                 },
             }, { quoted: ms });
