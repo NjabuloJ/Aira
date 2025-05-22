@@ -3,47 +3,36 @@ const fs = require('fs-extra');
 const { fana } = require(__dirname + "/../njabulo/fana");
 const { format } = require(__dirname + "/../njabulo/mesfonctions");
 const os = require("os");
-const conf = require(__dirname + "/../set");
 const moment = require("moment-timezone");
 const s = require(__dirname + "/../set");
-const more = String.fromCharCode(8206)
-const readmore = more.repeat(4001)
 
-fana({ nomCom: "ma", categorie: "General" }, async (dest, zk, commandeOptions) => {
-    let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
+fana({ nomCom: "lana", categorie: "General" }, async (dest, zk, commandeOptions) => {
+    let { ms, repondre, prefixe, nomAuteurMessage, mybotpic } = commandeOptions;
     let { cm } = require(__dirname + "/../njabulo//fana");
     var coms = {};
-    var mode = "public";
-    
-    if ((s.MODE).toLocaleLowerCase() != "yes") {
-        mode = "private";
-    }
+    var mode = s.MODE.toLowerCase() !== "yes" ? "private" : "public";
 
-
-    
-
-    cm.map(async (com, index) => {
-        if (!coms[com.categorie])
-            coms[com.categorie] = [];
+    cm.map(async (com) => {
+        if (!coms[com.categorie]) coms[com.categorie] = [];
         coms[com.categorie].push(com.nomCom);
     });
 
-    moment.tz.setDefault ("Africa/Botswana");
-    
+    moment.tz.setDefault("Africa/Nairobi");
+    const temps = moment().format('HH:mm:ss');
+    const date = moment().format('DD/MM/YYYY');
 
-// Créer une date et une heure en GMT
-const temps = moment().format('HH:mm:ss');
-const date = moment().format('DD/MM/YYYY');
-const hour = moment().hour();
-    let greeting = "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ!";
+    // Generate greeting based on time of day
+    const hour = moment().hour();
+    let greeting = "Good Morning";
     if (hour >= 12 && hour < 18) {
-        greeting = "ɢᴏᴏᴅ ᴀғᴛᴇʀɴɴᴏɴ!;
+        greeting = "Good afternnon!";
     } else if (hour >= 18) {
-        greeting = "ɢᴏᴏᴅ ᴇᴠᴇʀɴɪɴɢ!";
+        greeting = "Good Everning!";
     } else if (hour >= 22 || hour < 5) {
-        greeting = "ɢᴏᴏᴅ ɴɪɢʜᴛ";
-    
-  let infoMsg =  `
+        greeting = "Good Night 🌌";
+    }
+
+    let infoMsg = `
 *╭─❖ 𓆩 🦋 𓆪 ❖─╮*
      *Alec-Jb*
 *╰─❖ 𓆩 🦋 𓆪 ❖─╯* 
