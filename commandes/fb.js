@@ -15,10 +15,10 @@ fana({nomCom : "instagram" , categorie : "Download"},async (dest , zk , commande
     let igvid = await axios('https://vihangayt.me/download/instagram?url='+link)
 
     if (igvid.data.data.data[0].type == 'video') {
-    zk.sendMessage(dest,{video : {url : igvid.data.data.data[0].url},caption : "ig video downloader powered by *Njabulo-Md*",gifPlayback : false },{quoted : ms}) 
+    zk.sendMessage(dest,{video : {url : igvid.data.data.data[0].url},caption : "*Alec-Jb*\n😌💫Hold up, Grabbing your instagram like a pro! 🔍\n",gifPlayback : false },{quoted : ms}) 
     }
     else {
-        zk.sendMessage(dest,{image : {url : igvid.data.data.data[0].url},caption : "ig image downloader powered by *Njabulo-Md*"})
+        zk.sendMessage(dest,{image : {url : igvid.data.data.data[0].url},caption : "*Alec-Jb*\nHold up, Grabbing your instagram like a pro! 🔍\n"})
     }
   
   } catch (e) {repondre("erreur survenue lors du téléchargement \n " + e)}
@@ -35,7 +35,7 @@ async (dest, zk, commandeOptions) => {
   const { repondre, ms, arg } = commandeOptions;
 
   if (!arg[0]) {
-    repondre('Insert a public facebook video link!');
+    repondre('*Alec-Jb*\n🤬😡DON’T WASTE MY VIBES! Give me title, like . Facebook and put links and video Faded! 😡\n facebook video link!');
     return;
   }
 
@@ -49,17 +49,17 @@ async (dest, zk, commandeOptions) => {
         Lien: ${result.url}
       `;
        zk.sendMessage(dest,{image : { url : result.thumbnail}, caption : caption},{quoted : ms}) ;
-       zk.sendMessage(dest, { video: { url: result.hd  }, caption: 'pσwєr вч hαppínєss[████████░░] : 100%' }, { quoted: ms });
+       zk.sendMessage(dest, { video: { url: result.hd  }, caption: '*Alec-Jb*\n🤗Hold up, Grabbing your fb like a pro! 🔍\n' }, { quoted: ms });
       
     })
     .catch((error) => {console.log("Error:", error)
-                      repondre('try fbdl2 on this link')});
+                      repondre('*Alec-Jb*\n🤬NO Facebook ! Your query is TRASH! Try again! 😣\ntry fbdl2 on this link')});
 
 
    
   } catch (error) {
-    console.error('Erreur lors du téléchargement de la vidéo :', error);
-    repondre('Erreur lors du téléchargement de la vidéo.' , error);
+    console.error('*Alec-Jb*\n😡Erreur lors du téléchargement de la vidéo :', error);
+    repondre('*Alec-Jb*\n🥵Erreur lors du téléchargement de la vidéo.' , error);
   }
 });
 
@@ -99,7 +99,7 @@ async (dest, zk, commandeOptions) => {
   const { repondre, ms, arg } = commandeOptions;
 
   if (!arg[0]) {
-    repondre('Insert a public facebook video link! !');
+    repondre('*Alec-Jb*\nHEY,  😤 What’s this nonsense? No lite?\n🤬 Stop wasting my time and give me lite and put links fb');
     return;
   }
 
@@ -113,7 +113,7 @@ async (dest, zk, commandeOptions) => {
         Lien: ${result.url}
       `;
        zk.sendMessage(dest,{image : { url : result.thumbnail}, caption : caption},{quoted : ms}) ;
-       zk.sendMessage(dest, { video: { url: result.sd  }, caption: 'pσwєr вч hαppínєss[████████░░] : 100%' }, { quoted: ms });
+       zk.sendMessage(dest, { video: { url: result.sd  }, caption: '*Alec-Jb*\n🥰Hold up, Grabbing your Facebook like a pro! 🔍\n' }, { quoted: ms });
       
     })
     .catch((error) => {console.log("Error:", error)
@@ -122,8 +122,8 @@ async (dest, zk, commandeOptions) => {
 
    
   } catch (error) {
-    console.error('Erreur lors du téléchargement de la vidéo :', error);
-    repondre('Erreur lors du téléchargement de la vidéo.' , error);
+    console.error('*Alec-Jb*\n🤬🥵Erreur lors du téléchargement de la vidéo :', error);
+    repondre('*Alec-Jb*\n😭🤷Erreur lors du téléchargement de la vidéo.' , error);
   }
 });
 
