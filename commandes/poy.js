@@ -77,6 +77,8 @@ fana({
          thumbnailUrl: thumbnailUrl || conf.URL || '',
         renderLargerThumbnail: false,
         showAdAttribution: true,
+         },
+        },
       },
       {
         document: { url: download_url },
@@ -91,6 +93,8 @@ fana({
          thumbnailUrl: thumbnailUrl || conf.URL || '',
          renderLargerThumbnail: false,
          showAdAttribution: true,
+          },
+        },
       }
     ];
 
