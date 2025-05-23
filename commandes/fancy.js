@@ -1,4 +1,4 @@
-const { use } = require("../njabulo/fana");
+const { fana } = require("../njabulo/fana");
 const fancy = require("../commandes/style");
 
 fana({ nomCom: "fancy", categorie: "Fun", reaction: "🖋️" }, async (dest, zk, commandeOptions) => {
@@ -8,7 +8,7 @@ fana({ nomCom: "fancy", categorie: "Fun", reaction: "🖋️" }, async (dest, zk
 
     try {
         if (id === undefined || text === undefined) {
-            return await repondre(`\nExemple : ${prefixe}fancy Alec-Jb\n` + String.fromCharCode(8206).repeat(4001) + fancy.list('𝐁𝐔𝐆𝐀𝐓𝐓𝐈', fancy));
+            return await repondre(`\nExemple : ${prefixe} power by Njabulo Jb\n` + String.fromCharCode(8206).repeat(4001) + fancy.list('Njabulo_Jb', fancy));
         }
 
         const selectedStyle = fancy[parseInt(id) - 1];
