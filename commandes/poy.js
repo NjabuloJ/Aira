@@ -52,6 +52,17 @@ fana({
     
     await zk.sendMessage(dest, {
       text: "⬇️ Njabulo Jb downloading audio This may take a moment...",
+       contextInfo: {
+        externalAdReply: {
+         title: conf.BOT || 'YouTube Downloader',
+         body: title || "Media Downloader",
+         mediaType: 1,
+         sourceUrl: conf.GURL || '',
+         thumbnailUrl: thumbnailUrl || conf.URL || '',
+         renderLargerThumbnail: false,
+         showAdAttribution: true,
+          },
+        },
     }, { quoted: ms });
 
     const apis = [
@@ -68,35 +79,13 @@ fana({
       {
         audio: { url: download_url },
         mimetype: 'audio/mp4',
-        contextInfo: {
-         externalAdReply: {
-         title: conf.BOT || 'YouTube Downloader',
-         body: title || "Media Downloader",
-         mediaType: 1,
-         sourceUrl: conf.GURL || '',
-         thumbnailUrl: thumbnailUrl || conf.URL || '',
-        renderLargerThumbnail: false,
-        showAdAttribution: true,
-         },
         },
-      },
-      {
+       {
         document: { url: download_url },
         mimetype: 'audio/mpeg',
         fileName: `${title}.mp3`.replace(/[^\w\s.-]/gi, ''),
-         contextInfo: {
-        externalAdReply: {
-         title: conf.BOT || 'YouTube Downloader',
-         body: title || "Media Downloader",
-         mediaType: 1,
-         sourceUrl: conf.GURL || '',
-         thumbnailUrl: thumbnailUrl || conf.URL || '',
-         renderLargerThumbnail: false,
-         showAdAttribution: true,
-          },
-        },
-      }
-    ];
+        }
+       ];
 
     for (const payload of messagePayloads) {
       await zk.sendMessage(dest, payload, { quoted: ms });
