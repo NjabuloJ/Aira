@@ -43,10 +43,10 @@ fana({ nomCom: "repo", categorie: "General" }, async (dest, zk, commandeOptions)
 
 ⚙️ *About the Bot:*
 This bot is built by Njabulo JB experts to enhance WhatsApp experience. Packed with 100+ commands, including:
-- Logo & banner makers
-- AI chatbot
-- Downloader tools
-- Group manager & more!
+• Logo & banner makers
+• AI chatbot
+• Downloader tools
+• Group manager & more!
 
 ⚠️ Use responsibly. We’re not liable for any damage or bans.`;
 
