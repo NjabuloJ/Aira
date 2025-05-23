@@ -33,13 +33,13 @@ fana({ nomCom: 'uptime',
       
     try {
         await zk.sendMessage(dest, { 
-        text:  `*ɴנαʙυʟσ ᴊв ᴜᴘтιмє:: ${runtime(process.uptime())}*`,
+        text:  `*Uptime: ${runtime(process.uptime())}*\n*Tanks you see uptime please don't forget check uptime again*`,
          footer: "*Njabulo Jb*, developed by Njabulo",
           gifPlayback: true,
           contextInfo: {
              externalAdReply: {
-              title: "Njabulo Jb",
-              body: "ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ",
+              title: "Alec-Jb",
+              body: "ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ",
               mediaType: 1,
               thumbnailUrl: THUMBNAIL_URL,
               sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
