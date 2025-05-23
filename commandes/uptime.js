@@ -41,7 +41,7 @@ fana({ nomCom: 'uptime',
               title: "Njabulo Jb",
               body: "ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ",
               mediaType: 1,
-              thumbnailUrl: thumbnail,
+              thumbnailUrl: THUMBNAIL_URL,
               sourceUrl: "https://github.com/NjabuloJ/Njabulo-Jb",
               showAdAttribution: true,
                 }
