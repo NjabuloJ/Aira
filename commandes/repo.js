@@ -34,8 +34,8 @@ fana({ nomCom: "repo", categorie: "General" }, async (dest, zk, commandeOptions)
 
     let infoMsg = `
    
-            *This is ${conf.BOT}*
-            the best bot in the universe developed by ${conf.OWNER_NAME}. Fork and give a star 🌟 to my repo!
+            *This is Alec-Jb*
+            the best bot in the universe developed by Njabulo Jb. Fork and give a star 🌟 to my repo!
 > Alec Jb🟢
 > https://github.com/NjabuloJ/Alec_Jb 
 > Njabulo JB🟢 
