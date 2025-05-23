@@ -68,13 +68,29 @@ fana({
       {
         audio: { url: download_url },
         mimetype: 'audio/mp4',
-        caption: `🎵 *${title}*`,
+        contextInfo: {
+         externalAdReply: {
+         title: conf.BOT || 'YouTube Downloader',
+         body: title || "Media Downloader",
+         mediaType: 1,
+         sourceUrl: conf.GURL || '',
+         thumbnailUrl: thumbnailUrl || conf.URL || '',
+        renderLargerThumbnail: false,
+        showAdAttribution: true,
       },
       {
         document: { url: download_url },
         mimetype: 'audio/mpeg',
         fileName: `${title}.mp3`.replace(/[^\w\s.-]/gi, ''),
-        caption: `📁 *${title}* (Document)`,
+         contextInfo: {
+        externalAdReply: {
+         title: conf.BOT || 'YouTube Downloader',
+         body: title || "Media Downloader",
+         mediaType: 1,
+         sourceUrl: conf.GURL || '',
+         thumbnailUrl: thumbnailUrl || conf.URL || '',
+         renderLargerThumbnail: false,
+         showAdAttribution: true,
       }
     ];
 
