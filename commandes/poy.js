@@ -51,18 +51,8 @@ fana({
     const video = await searchYouTube(query);
     
     await zk.sendMessage(dest, {
-      text: "⬇️ Njabulo Jb downloading audio This may take a moment...",
-       contextInfo: {
-        externalAdReply: {
-         title: conf.BOT || 'YouTube Downloader',
-         body: title || "Media Downloader",
-         mediaType: 1,
-         sourceUrl: conf.GURL || '',
-         thumbnailUrl: thumbnailUrl || conf.URL || '',
-         renderLargerThumbnail: false,
-         showAdAttribution: true,
-          },
-        },
+      image: { url: video.thumbnail},
+      caption: `🎵 *${video.title}*`,
     }, { quoted: ms });
 
     const apis = [
@@ -79,6 +69,7 @@ fana({
       {
         audio: { url: download_url },
         mimetype: 'audio/mp4',
+        caption: `🎵 *${title}*`,
         },
        {
         document: { url: download_url },
