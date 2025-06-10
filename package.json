@@ -1,11 +1,11 @@
 {
-  "name": "Njabulo_Jb",
+  "name": "Alec-Jb",
   "version": "2.0.0",
   "description": "",
   "main": "alec.js",
   "scripts": {
     "test": "node alec.js",
-    "s": "node index.js",
+    "s": "node alec.js",
     "toshtech": "pm2 start alec.js --attach",
     "toshtech": "pm2 start alec.js --attach",
     "c": "tsc"
