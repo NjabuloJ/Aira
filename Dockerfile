@@ -9,8 +9,9 @@ RUN apt-get update && \
   npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
   
-RUN git clone https://github.com/NjabuloJ/Alec-Jb  /root/ToshTech
+RUN  git clone https://github.com/NjabuloJ/Alec-Jb  /root/ToshTech
 WORKDIR /root/toshtech/
+
 
 
 COPY package.json .
@@ -21,4 +22,4 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["npm", "run" , "alec.js"]
+CMD ["node", "alec.js"]
