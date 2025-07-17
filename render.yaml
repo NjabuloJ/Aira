@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: HUNTER-XMD
+    name: Aira
     env: node
     plan: free
-    repo: https://github.com/Obedweb/Hunter-Xmd1
+    repo: https://github.com/NjabuloJ/Aira
     branch: main
     buildCommand: npm install
     startCommand: npm start
