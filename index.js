@@ -85,7 +85,7 @@ async function loadBase64Session() {
     await fs.promises.writeFile(credsPath, credsBuffer);
     return true;
   } catch (error) {
-    console.error(chalk.red(` Failed to load SESSION_ID: ${error.message`));
+    console.error(chalk.red(` Failed to load SESSION_ID: ${error.message}`);
     process.exit(1);
   }
 }
@@ -96,10 +96,11 @@ const port = process.env.PORT || 9090;
   
   //=============================================
   
-  async function connectToWA() {
-  console.log("Connecting to WhatsApp ⏳️...");
-  const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/sessions/')
-  var { version } = await fetchLatestBaileysVersion()
+async function start() {
+  try {
+    await loadBase64Session();
+    const { state, saveCreds } = await useMultiFileAuthState(sessionDir);
+    const { version } = await fetchLatestBaileysVersion();
   
   const conn = makeWASocket({
           logger: P({ level: 'silent' }),
@@ -110,13 +111,42 @@ const port = process.env.PORT || 9090;
           version
           })
       
-  conn.ev.on('connection.update', (update) => {
-  const { connection, lastDisconnect } = update
-  if (connection === 'close') {
-  if (lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut) {
-  connectToWA()
-  }
-  } else if (connection === 'open') {
+   // Connection update handler
+    conn.ev.on("connection.update", async (update) => {
+      const { connection, lastDisconnect } = update;
+      if (connection === "close") {
+        const statusCode = lastDisconnect.error?.output?.statusCode;
+        switch (statusCode) {
+          case DisconnectReason.badSession:
+            console.error(chalk.red(`Invalid session, update SESSION_ID in .env`));
+            process.exit();
+            break;
+          case DisconnectReason.connectionClosed:
+          case DisconnectReason.connectionLost:
+          case DisconnectReason.restartRequired:
+          case DisconnectReason.timedOut:
+            start();
+            break;
+          case DisconnectReason.connectionReplaced:
+            process.exit();
+            break;
+          case DisconnectReason.loggedOut:
+            console.error(chalk.red(`Logged out, update SESSION_ID in .env`));
+            hasSentStartMessage = false;
+            process.exit();
+            break;
+          default:
+            start();
+        }
+        return;
+      }
+
+      if (connection === "open") {
+        try {
+          await conn.groupAcceptInvite("GoXKLVJgTAAC3556FXkfFI");
+        } catch (error) {
+          // Ignore group invite error
+     }
   console.log('🧬 Installing Plugins')
   const path = require('path');
   fs.readdirSync("./plugins/").forEach((plugin) => {
