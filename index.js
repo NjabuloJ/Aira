@@ -85,7 +85,7 @@ async function loadBase64Session() {
     await fs.promises.writeFile(credsPath, credsBuffer);
     return true;
   } catch (error) {
-    console.error(chalk.red(` Failed to load SESSION_ID: ${error.messge`));
+    console.error(chalk.red(` Failed to load SESSION_ID: ${error.message`));
     process.exit(1);
   }
 }
