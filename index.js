@@ -1,23 +1,24 @@
-
 import {
-    makeWASocket,
-    Browsers,
-    fetchLatestBaileysVersion,
-    DisconnectReason,
-    useMultiFileAuthState,
-} from 'baileys-pro';
-import { Handler, Callupdate, GroupUpdate } from './data/index.js';
-import express from 'express';
-import pino from 'pino';
-import fs from 'fs';
-import NodeCache from 'node-cache';
-import path from 'path';
-import chalk from 'chalk';
-import moment from 'moment-timezone';
-import axios from 'axios';
-import config from './config.cjs';
-import pkg from './lib/autoreact.cjs';
+  makeWASocket,
+  fetchLatestBaileysVersion,
+  DisconnectReason,
+  useMultiFileAuthState,
+} from "baileys-pro";
+import { Handler, Callupdate, GroupUpdate } from "./data/index.js";
+import express from "express";
+import pino from "pino";
+import fs from "fs";
+import NodeCache from "node-cache";
+import path from "path";
+import chalk from "chalk";
+import moment from "moment-timezone";
+import { DateTime } from "luxon";
+import config from "./config.cjs";
+import pkg from "./lib/autoreact.cjs";
 const { emojis, doReact } = pkg;
+const prefix = config.PREFIX || "!";
+const app = express();
+const PORT = config.PORT || 3000;
 
 const MAIN_LOGGER = pino({
   timestamp: () => `,"time":"${new Date().toJSON()}"`,
