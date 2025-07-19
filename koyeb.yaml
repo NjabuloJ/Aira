@@ -1,6 +1,6 @@
-name: jawad-md
+name: Njabulo-Jb
 services:
-  - name: jawad-md-service
+  - name: Aira-service
     type: web
     ports:
       - 5000
