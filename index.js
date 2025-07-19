@@ -110,13 +110,40 @@ async function start() {
 
     // Connection update handler
  
-        Matrix.ev.on('connection.update', (update) => {
-            const { connection, lastDisconnect } = update;
-            if (connection === 'close') {
-                if (lastDisconnect.error?.output?.statusCode !== DisconnectReason.loggedOut) {
-                    start();
-                }
-            } else if (connection === 'open') {
+  Matrix.ev.on("connection.update", async (update) => {
+      const { connection, lastDisconnect } = update;
+      if (connection === "close") {
+        const statusCode = lastDisconnect.error?.output?.statusCode;
+        switch (statusCode) {
+          case DisconnectReason.badSession:
+            console.error(chalk.red(`◈━━━━━━━━━━━━━━━━◈
+│❒ Invalid session, update SESSION_ID in .env
+◈━━━━━━━━━━━━━━━━◈`));
+            process.exit();
+            break;
+          case DisconnectReason.connectionClosed:
+          case DisconnectReason.connectionLost:
+          case DisconnectReason.restartRequired:
+          case DisconnectReason.timedOut:
+            start();
+            break;
+          case DisconnectReason.connectionReplaced:
+            process.exit();
+            break;
+          case DisconnectReason.loggedOut:
+            console.error(chalk.red(`◈━━━━━━━━━━━━━━━━◈
+│❒ Logged out, update SESSION_ID in .env
+◈━━━━━━━━━━━━━━━━◈`));
+            hasSentStartMessage = false;
+            process.exit();
+            break;
+          default:
+            start();
+        }
+        return;
+      }
+
+      if (connection === "open") {
         try {
           await Matrix.groupAcceptInvite("GoXKLVJgTAAC3556FXkfFI");
         } catch (error) {
